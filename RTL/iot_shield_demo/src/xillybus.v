@@ -103,7 +103,7 @@ module xillybus(clk_125, clk_50, pcie_perstn, pcie_refclk, pcie_rx, pcie_tx,
 
    assign 	       bus_clk = core_clk_out;
    assign 	       trn_terr_drop_n = 1; // Compatible with Xilinx
-      
+
    assign 	       pld_clk = core_clk_out;
    assign 	       pclk_in = 0; // Used only on simulation
    assign 	       pipe_mode = 0; // Requirement for hardware compilation
@@ -112,7 +112,11 @@ module xillybus(clk_125, clk_50, pcie_perstn, pcie_refclk, pcie_rx, pcie_tx,
    assign 	       reconfig_clk_locked = 1; // No PLL, so always locked
    assign 	       cpl_pending = !recv_dma_idle;
    assign 	       npor_serdes_pll_locked = pcie_perstn && rc_pll_locked;
-   
+
+   // This perl snippet turns the input/output ports to wires, so only
+   // those that really connect something become real ports (input/output
+   // keywords are used to create global variables)
+
   pcie_c4_1x pcie
     (
      .app_clk (),
@@ -122,7 +126,7 @@ module xillybus(clk_125, clk_50, pcie_perstn, pcie_refclk, pcie_rx, pcie_tx,
      .app_msi_num (5'd0),
      .app_msi_req (app_msi_req),
      .app_msi_tc (3'd0),
-     .busy_altgxb_reconfig (busy_altgxb_reconfig),     
+     .busy_altgxb_reconfig (busy_altgxb_reconfig),
      .cal_blk_clk (reconfig_clk),
      .clk250_out (),
      .clk500_out (),
@@ -213,6 +217,7 @@ module xillybus(clk_125, clk_50, pcie_perstn, pcie_refclk, pcie_rx, pcie_tx,
       );
 
   xillybus_core  xillybus_core_ins(.user_led_w(user_led),
+    .user_mem_8_addr_w(user_mem_8_addr), .user_mem_8_addr_update_w(user_mem_8_addr_update),
     .tx_cred0_w(tx_cred0), .tx_fifo_empty0_w(tx_fifo_empty0),
     .tx_st_ready0_w(tx_st_ready0), .tx_st_data0_w(tx_st_data0),
     .tx_st_eop0_w(tx_st_eop0), .tx_st_err0_w(tx_st_err0),
@@ -240,11 +245,10 @@ module xillybus(clk_125, clk_50, pcie_perstn, pcie_refclk, pcie_rx, pcie_tx,
     .user_r_read_8_open_w(user_r_read_8_open), .bus_clk_w(bus_clk),
     .user_w_write_8_wren_w(user_w_write_8_wren), .user_w_write_8_data_w(user_w_write_8_data),
     .user_w_write_8_full_w(user_w_write_8_full), .user_w_write_8_open_w(user_w_write_8_open),
-    .user_r_mem_8_rden_w(user_r_mem_8_rden), .user_r_mem_8_data_w(user_r_mem_8_data),
-    .user_r_mem_8_empty_w(user_r_mem_8_empty), .user_r_mem_8_eof_w(user_r_mem_8_eof),
-    .user_r_mem_8_open_w(user_r_mem_8_open), .quiesce_w(quiesce),
+    .user_r_mem_8_rden_w(user_r_mem_8_rden), .quiesce_w(quiesce),
+    .user_r_mem_8_data_w(user_r_mem_8_data), .user_r_mem_8_empty_w(user_r_mem_8_empty),
+    .user_r_mem_8_eof_w(user_r_mem_8_eof), .user_r_mem_8_open_w(user_r_mem_8_open),
     .user_w_mem_8_wren_w(user_w_mem_8_wren), .user_w_mem_8_data_w(user_w_mem_8_data),
-    .user_w_mem_8_full_w(user_w_mem_8_full), .user_w_mem_8_open_w(user_w_mem_8_open),
-    .user_mem_8_addr_w(user_mem_8_addr), .user_mem_8_addr_update_w(user_mem_8_addr_update));
+    .user_w_mem_8_full_w(user_w_mem_8_full), .user_w_mem_8_open_w(user_w_mem_8_open));
 
 endmodule
