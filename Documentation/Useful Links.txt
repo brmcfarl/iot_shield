@@ -1,0 +1,27 @@
+
+Useful Links
+Author: Matt Staniszewski
+
+Below is a list of links to specifications, HOWTO guides and other useful information regarding the IoT shield hardware:
+
+* Altera (FPGA, PCIe)
+    o Cyclone IV FPGA Documentation – http://bit.ly/1qKD8Dl 
+    o Quartus Software – https://www.altera.com/download/software/quartus-ii-se/12.1sp1 
+    o USB Blaster II Drivers – http://www.altera.com/download/drivers/dri-index.html 
+
+* Intel (Galileo, Quark)
+    o Galileo Documentation
+        - Gen 1 - http://intel.ly/1qKEq0U 
+        - Gen 2 - http://intel.ly/1qHVG6U 
+    o Galileo Software - https://communities.intel.com/docs/DOC-22226 
+    o Maker Forums - https://communities.intel.com/community/makers/galileo/forums 
+    o Quark Documentation - http://intel.ly/1pcfAl9 
+
+* VLSI Plus (CSI)
+o	CSI-2 Documentation (COMING SOON!)
+
+•	Xillybus (PCIe DMA)
+    o Documentation and Guides – http://xillybus.com/doc  
+    o IP Factory (Generating another IP core) - http://xillybus.com/ipfactory 
+
+Please don’t hesitate to add to this document :-)

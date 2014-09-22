@@ -1,0 +1,16 @@
+
+Tips and Tricks
+Author: Matt Staniszewski
+
+Here’s a quick list of tips and tricks to get you started using the Galileo and IoT Shield:
+
+* Quartus 
+    o Downloads: Make sure to download and install the following files to install support for the Cyclone IV FPGA on the IoT Shield:
+        - 12.1sp1_quartus_windows.exe
+        - 12.1sp1_devices_cyclone_max_legacy_windows.exe
+    o Version: Be sure to download Quartus II Web Edition version 12.1 SP1.  
+
+* Yocto Linux
+    o Computer Requirements: Use a computer that has at least 4GB of RAM and be sure to use Ubuntu 12.04 for your build environment for Yocto images.
+
+Please don’t hesitate to add to this document :-)
