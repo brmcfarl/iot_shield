@@ -18,10 +18,11 @@ Below is a list of links to specifications, HOWTO guides and other useful inform
     o Quark Documentation - http://intel.ly/1pcfAl9 
 
 * VLSI Plus (CSI)
-o	CSI-2 Documentation (COMING SOON!)
+    o CSI-2 Documentation (COMING SOON!)
 
-•	Xillybus (PCIe DMA)
+* Xillybus (PCIe DMA)
     o Documentation and Guides – http://xillybus.com/doc  
     o IP Factory (Generating another IP core) - http://xillybus.com/ipfactory 
+    
 
 Please don’t hesitate to add to this document :-)
