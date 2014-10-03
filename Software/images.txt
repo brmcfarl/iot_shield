@@ -1,0 +1,7 @@
+
+Tips and Tricks
+Author: Matt Staniszewski
+
+The following links contain full Yocto Linux images to be used on Galileo.  These files require 7-zip (http://www.7-zip.org/) to open them:
+
+* Galileo SDK Image w/o PTP - https://www.dropbox.com/s/dxtzxjcstsw0m5p/galileo_sdk_image_no_ptp.7z?dl=0
