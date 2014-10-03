@@ -4,6 +4,9 @@ Author: Matt Staniszewski
 
 Here’s a quick list of tips and tricks to get you started using the Galileo and IoT Shield:
 
+* Galileo
+    o Serial Cables: There are two types of serial cables depending on the version (Gen1 or Gen2) of Galileo you have.  Please see the folliowing for more info:
+        - https://communities.intel.com/docs/DOC-23043
 * Quartus 
     o Downloads: Make sure to download and install the following files to install support for the Cyclone IV FPGA on the IoT Shield:
         - 12.1sp1_quartus_windows.exe
@@ -12,5 +15,6 @@ Here’s a quick list of tips and tricks to get you started using the Galileo an
 
 * Yocto Linux
     o Computer Requirements: Use a computer that has at least 4GB of RAM and be sure to use Ubuntu 12.04 for your build environment for Yocto images.
+    o Image: A sample SDK image is available under the Software folder.  Use 7zip (http://www.7-zip.org/) to extract and load to a microSD card.  It is compatible with Galileo Gen1 and Gen2.
 
 Please don’t hesitate to add to this document :-)

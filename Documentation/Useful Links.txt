@@ -15,14 +15,17 @@ Below is a list of links to specifications, HOWTO guides and other useful inform
         - Gen 2 - http://intel.ly/1qHVG6U 
     o Galileo Software - https://communities.intel.com/docs/DOC-22226 
     o Maker Forums - https://communities.intel.com/community/makers/galileo/forums 
+    o Serial Cables - https://communities.intel.com/docs/DOC-23043
     o Quark Documentation - http://intel.ly/1pcfAl9 
 
 * VLSI Plus (CSI)
-    o CSI-2 Documentation (COMING SOON!)
+    o CSI-2 Documentation - Please see 'svr_lt2_rev7.docx' under Documentation/Specs
 
 * Xillybus (PCIe DMA)
     o Documentation and Guides – http://xillybus.com/doc  
     o IP Factory (Generating another IP core) - http://xillybus.com/ipfactory 
     
+* Misc
+    o 7-zip (extract .7z files) - http://www.7-zip.org/
 
 Please don’t hesitate to add to this document :-)
