@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="iot_shield_demo">
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|pll_100_to_125_50:free_to_pcie_clks|altpll:altpll_component" CBX_FILE_NAME="pll_100_to_125_50_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|pcie_c4_1x:pcie|pcie_c4_1x_serdes:serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8:pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|altpll:pll0" CBX_FILE_NAME="altpll_nn81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|alt_cal_c3gxb:calibration_c3gxb|lpm_mux:alt_cal_mux_gen.testbus_mux" CBX_FILE_NAME="mux_4vc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|altpcie_reconfig_3cgx_alt_dprio_v5k:dprio|lpm_compare:pre_amble_cmpr" CBX_FILE_NAME="cmpr_87e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|altpcie_reconfig_3cgx_alt_dprio_v5k:dprio|lpm_compare:rd_data_output_cmpr" CBX_FILE_NAME="cmpr_kae.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|altpcie_reconfig_3cgx_alt_dprio_v5k:dprio|lpm_counter:state_mc_counter" CBX_FILE_NAME="cntr_29h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|altpcie_reconfig_3cgx_alt_dprio_v5k:dprio|lpm_decode:state_mc_decode" CBX_FILE_NAME="decode_8ff.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|iot_shield_demo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|altpcie_reconfig_3cgx_alt_dprio_v5k:dprio|lpm_compare:state_mc_cmpr" CBX_FILE_NAME="cmpr_usd.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

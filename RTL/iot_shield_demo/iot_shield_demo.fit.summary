@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Nov 07 15:45:42 2014
+Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
+Revision Name : iot_shield_demo
+Top-level Entity Name : iot_shield_demo
+Family : Cyclone IV GX
+Device : EP4CGX30CF23C7
+Timing Models : Final
+Total logic elements : 6,661 / 29,440 ( 23 % )
+    Total combinational functions : 5,522 / 29,440 ( 19 % )
+    Dedicated logic registers : 4,372 / 29,440 ( 15 % )
+Total registers : 4372
+Total pins : 200 / 307 ( 65 % )
+Total virtual pins : 0
+Total memory bits : 30,304 / 1,105,920 ( 3 % )
+Embedded Multiplier 9-bit elements : 0 / 160 ( 0 % )
+Total GXB Receiver Channel PCS : 1 / 4 ( 25 % )
+Total GXB Receiver Channel PMA : 1 / 4 ( 25 % )
+Total GXB Transmitter Channel PCS : 1 / 4 ( 25 % )
+Total GXB Transmitter Channel PMA : 1 / 4 ( 25 % )
+Total PLLs : 2 / 6 ( 33 % )

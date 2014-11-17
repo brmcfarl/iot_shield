@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Fri Nov 07 15:44:55 2014
+Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
+Revision Name : iot_shield_demo
+Top-level Entity Name : iot_shield_demo
+Family : Cyclone IV GX
+Total logic elements : 7,491
+    Total combinational functions : 5,471
+    Dedicated logic registers : 4,393
+Total registers : 4393
+Total pins : 189
+Total virtual pins : 0
+Total memory bits : 30,304
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 1
+Total GXB Receiver Channel PMA : 1
+Total GXB Transmitter Channel PCS : 1
+Total GXB Transmitter Channel PMA : 1
+Total PLLs : 2
