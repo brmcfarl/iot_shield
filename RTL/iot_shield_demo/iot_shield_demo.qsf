@@ -449,7 +449,7 @@ set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[3]
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[4]
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[5]
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[6]
-set_global_assignment -name VERILOG_FILE src/Intel/iot_shield_demo.v
+set_global_assignment -name VERILOG_FILE src/iot_shield_demo.v
 set_global_assignment -name SDC_FILE src/xillydemo.sdc
 set_global_assignment -name VERILOG_FILE src/xillybus.v
 set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_pipen1b.v"
