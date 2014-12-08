@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for iot_shield_demo
-Fri Nov 07 15:46:04 2014
+Mon Dec 08 09:13:16 2014
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -168,12 +168,12 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
+; Average used               ; 1.25        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  37.5%      ;
+;     Processor 2            ;  25.0%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -183,7 +183,7 @@ agreement for further details.
 +-------------------+--------+--------------------------+
 ; SDC File Path     ; Status ; Read at                  ;
 +-------------------+--------+--------------------------+
-; src/xillydemo.sdc ; OK     ; Fri Nov 07 15:45:57 2014 ;
+; src/xillydemo.sdc ; OK     ; Mon Dec 08 09:13:09 2014 ;
 +-------------------+--------+--------------------------+
 
 
@@ -4332,7 +4332,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Fri Nov 07 15:45:54 2014
+    Info: Processing started: Mon Dec 08 09:13:06 2014
 Info: Command: quartus_sta iot_shield_demo -c iot_shield_demo
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
@@ -4505,9 +4505,9 @@ Info (332146): Worst-case minimum pulse width slack is 0.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 751 megabytes
-    Info: Processing ended: Fri Nov 07 15:46:04 2014
+    Info: Peak virtual memory: 744 megabytes
+    Info: Processing ended: Mon Dec 08 09:13:16 2014
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 

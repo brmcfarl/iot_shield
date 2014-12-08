@@ -150,17 +150,6 @@ set_location_assignment PIN_AB10 -to csi_hs_d[1]
 set_location_assignment PIN_AB11 -to "csi_hs_d[1](n)"
 set_location_assignment PIN_AB8 -to csi_hs_d[0]
 set_location_assignment PIN_AB9 -to "csi_hs_d[0](n)"
-set_global_assignment -name SDC_FILE src/xillydemo.sdc
-set_global_assignment -name VERILOG_FILE src/xillybus.v
-set_global_assignment -name VERILOG_FILE src/iot_shield_demo.v
-set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_pipen1b.v"
-set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_reconfig_3cgx.v"
-set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_rs_serdes.v"
-set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x.v
-set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x_core.v
-set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_rs_hip.v
-set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x_serdes.v
-set_global_assignment -name QXP_FILE ../core/xillybus_core.qxp
 set_instance_assignment -name IO_STANDARD "1.2 V" -to csi_lp_clkn
 set_instance_assignment -name IO_STANDARD "1.2 V" -to csi_lp_clkp
 set_instance_assignment -name IO_STANDARD "1.2 V" -to csi_lp_n[1]
@@ -460,5 +449,16 @@ set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[3]
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[4]
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[5]
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to sw_gpio[6]
+set_global_assignment -name VERILOG_FILE src/Intel/iot_shield_demo.v
+set_global_assignment -name SDC_FILE src/xillydemo.sdc
+set_global_assignment -name VERILOG_FILE src/xillybus.v
+set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_pipen1b.v"
+set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_reconfig_3cgx.v"
+set_global_assignment -name VERILOG_FILE "../pcie_core/ip_compiler_for_pci_express-library/altpcie_rs_serdes.v"
+set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x.v
+set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x_core.v
+set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_rs_hip.v
+set_global_assignment -name VERILOG_FILE ../pcie_core/pcie_c4_1x_serdes.v
+set_global_assignment -name QXP_FILE ../core/xillybus_core.qxp
 set_global_assignment -name QIP_FILE pll_100_to_125_50.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
