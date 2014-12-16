@@ -1,0 +1,459 @@
+diff -uprN linux/drivers/net/ethernet/stmicro/stmmac/common.h linux-new/drivers/net/ethernet/stmicro/stmmac/common.h
+--- linux/drivers/net/ethernet/stmicro/stmmac/common.h	2014-12-14 11:02:44.943898227 -0800
++++ linux-new/drivers/net/ethernet/stmicro/stmmac/common.h	2014-12-15 11:09:09.907887871 -0800
+@@ -296,6 +296,15 @@ struct stmmac_desc_ops {
+ 	/* Return the reception status looking at the RDES1 */
+ 	int (*rx_status) (void *data, struct stmmac_extra_stats *x,
+ 			  struct dma_desc *p);
++
++        /* Set tx timestamp enable bit */
++        void (*enable_tx_timestamp) (struct dma_desc *p);
++        /* get tx timestamp status */
++        int (*get_tx_timestamp_status) (struct dma_desc *p);
++        /* get timestamp value */
++         u64(*get_timestamp) (void *desc, u32 ats);
++        /* get rx timestamp status */
++        int (*get_rx_timestamp_status) (void *desc, u32 ats);
+ };
+ 
+ struct stmmac_dma_ops {
+diff -uprN linux/drivers/net/ethernet/stmicro/stmmac/enh_desc.c linux-new/drivers/net/ethernet/stmicro/stmmac/enh_desc.c
+--- linux/drivers/net/ethernet/stmicro/stmmac/enh_desc.c	2014-12-14 11:01:47.419898234 -0800
++++ linux-new/drivers/net/ethernet/stmicro/stmmac/enh_desc.c	2014-12-15 11:09:09.907887871 -0800
+@@ -323,6 +323,48 @@ static int enh_desc_get_rx_frame_len(str
+ 		return p->des01.erx.frame_length;
+ }
+ 
++static void enh_desc_enable_tx_timestamp(struct dma_desc *p)
++{
++        p->des01.etx.time_stamp_enable = 1;
++}
++
++static int enh_desc_get_tx_timestamp_status(struct dma_desc *p)
++{
++        return p->des01.etx.time_stamp_status;
++}
++
++static u64 enh_desc_get_timestamp(void *desc, u32 ats)
++{
++        u64 cycles;
++	struct dma_desc *p = (struct dma_desc *)desc;
++
++        if (ats) {
++	  cycles   = p->ts_hi;
++	  cycles <<= 31;
++	  cycles  |= p->ts_lo;
++        } else {
++	  cycles   = p->des3;
++	  cycles <<= 31;
++	  cycles  |= p->des2;
++        }
++
++        return cycles;
++}
++
++static int enh_desc_get_rx_timestamp_status(void *desc, u32 ats)
++{
++	struct dma_desc *p = (struct dma_desc *)desc;
++
++        if (!ats) {
++                if ((p->des2 == 0xffffffff) && (p->des3 == 0xffffffff))
++                        /* timestamp is corrupted, hence don't store it */
++                        return 0;
++                else
++                        return 1;
++        }
++	return p->des01.erx.ipc_csum_error;
++}
++
+ const struct stmmac_desc_ops enh_desc_ops = {
+ 	.tx_status = enh_desc_get_tx_status,
+ 	.rx_status = enh_desc_get_rx_status,
+@@ -339,4 +381,8 @@ const struct stmmac_desc_ops enh_desc_op
+ 	.set_tx_owner = enh_desc_set_tx_owner,
+ 	.set_rx_owner = enh_desc_set_rx_owner,
+ 	.get_rx_frame_len = enh_desc_get_rx_frame_len,
++        .enable_tx_timestamp = enh_desc_enable_tx_timestamp,
++        .get_tx_timestamp_status = enh_desc_get_tx_timestamp_status,
++        .get_timestamp = enh_desc_get_timestamp,
++        .get_rx_timestamp_status = enh_desc_get_rx_timestamp_status,
+ };
+diff -uprN linux/drivers/net/ethernet/stmicro/stmmac/norm_desc.c linux-new/drivers/net/ethernet/stmicro/stmmac/norm_desc.c
+--- linux/drivers/net/ethernet/stmicro/stmmac/norm_desc.c	2014-12-14 11:01:47.419898234 -0800
++++ linux-new/drivers/net/ethernet/stmicro/stmmac/norm_desc.c	2014-12-15 11:09:09.907887871 -0800
+@@ -215,6 +215,39 @@ static int ndesc_get_rx_frame_len(struct
+ 		return p->des01.rx.frame_length;
+ }
+ 
++static void ndesc_enable_tx_timestamp(struct dma_desc *p)
++{
++        p->des01.tx.time_stamp_enable = 1;
++}
++
++static int ndesc_get_tx_timestamp_status(struct dma_desc *p)
++{
++        return p->des01.tx.time_stamp_status;
++}
++
++static u64 ndesc_get_timestamp(void *desc, u32 ats)
++{
++        struct dma_desc *p = (struct dma_desc *)desc;
++        u64 cycles;
++
++        cycles   = p->des3;
++	cycles <<= 32;
++        cycles  |= p->des2;
++
++        return cycles;
++}
++
++static int ndesc_get_rx_timestamp_status(void *desc, u32 ats)
++{
++        struct dma_desc *p = (struct dma_desc *)desc;
++
++        if ((p->des2 == 0xffffffff) && (p->des3 == 0xffffffff))
++                /* timestamp is corrupted, hence don't store it */
++                return 0;
++        else
++                return 1;
++}
++
+ const struct stmmac_desc_ops ndesc_ops = {
+ 	.tx_status = ndesc_get_tx_status,
+ 	.rx_status = ndesc_get_rx_status,
+@@ -231,4 +264,8 @@ const struct stmmac_desc_ops ndesc_ops =
+ 	.set_tx_owner = ndesc_set_tx_owner,
+ 	.set_rx_owner = ndesc_set_rx_owner,
+ 	.get_rx_frame_len = ndesc_get_rx_frame_len,
++        .enable_tx_timestamp = ndesc_enable_tx_timestamp,
++        .get_tx_timestamp_status = ndesc_get_tx_timestamp_status,
++        .get_timestamp = ndesc_get_timestamp,
++        .get_rx_timestamp_status = ndesc_get_rx_timestamp_status,
+ };
+diff -uprN linux/drivers/net/ethernet/stmicro/stmmac/stmmac.h linux-new/drivers/net/ethernet/stmicro/stmmac/stmmac.h
+--- linux/drivers/net/ethernet/stmicro/stmmac/stmmac.h	2014-12-14 11:02:44.947898227 -0800
++++ linux-new/drivers/net/ethernet/stmicro/stmmac/stmmac.h	2014-12-15 11:09:09.907887871 -0800
+@@ -43,6 +43,8 @@ struct stmmac_priv {
+ 	unsigned int dirty_tx;
+ 	unsigned int dma_tx_size;
+ 	int tx_coalesce;
++        int hwts_tx_en;
++        int hwts_rx_en;
+ 
+ 	struct dma_desc *dma_rx ;
+ 	unsigned int cur_rx;
+@@ -109,6 +111,7 @@ struct stmmac_priv {
+ 	u32 tx_count_frames;
+ 	u32 tx_coal_frames;
+ 	u32 tx_coal_timer;
++        u32 adv_ts;
+ 	int use_riwt;
+ 	u32 rx_riwt;
+ };
+diff -uprN linux/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c linux-new/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+--- linux/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c	2014-12-14 11:02:44.947898227 -0800
++++ linux-new/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c	2014-12-15 11:09:09.907887871 -0800
+@@ -1153,6 +1153,10 @@ static int stmmac_open(struct net_device
+ 
+ 	stmmac_mmc_setup(priv);
+ 
++#ifdef CONFIG_STMMAC_PTP
++	stmmac_ptp_init(dev, priv->device);
++#endif
++
+ #ifdef CONFIG_STMMAC_DEBUG_FS
+ 	if (debugfs_registered == 0){
+ 		debugfs_registered = 1;
+@@ -1386,7 +1390,17 @@ static netdev_tx_t stmmac_xmit(struct sk
+ 
+ 	dev->stats.tx_bytes += skb->len;
+ 
+-	skb_tx_timestamp(skb);
++        if (unlikely((skb_shinfo(skb)->tx_flags & SKBTX_HW_TSTAMP) &&
++                     priv->hwts_tx_en)) {
++	  /* declare that device is doing timestamping */
++
++	  skb_shinfo(skb)->tx_flags |= SKBTX_IN_PROGRESS;
++	  printk(KERN_ERR "Request TX timestamp\n" );
++                priv->hw->desc->enable_tx_timestamp(first);
++        }
++
++        if (!priv->hwts_tx_en)
++                skb_tx_timestamp(skb);
+ 
+ 	priv->hw->dma->enable_dma_transmission(priv->ioaddr);
+ 
+@@ -1503,7 +1517,7 @@ static int stmmac_rx(struct stmmac_priv
+ 			skb->protocol = eth_type_trans(skb, priv->dev);
+ 
+ #ifdef CONFIG_STMMAC_PTP
+-			stmmac_ptp_tx_hwtstamp(priv, priv->dma_rx + entry, skb);
++			stmmac_ptp_rx_hwtstamp(priv, priv->dma_rx + entry, skb);
+ #endif
+ 			if (unlikely(!priv->plat->rx_coe))
+ 				skb_checksum_none_assert(skb);
+@@ -2160,10 +2174,6 @@ struct stmmac_priv *stmmac_dvr_probe(str
+ 	else
+ 		priv->clk_csr = priv->plat->clk_csr;
+ 
+-#ifdef CONFIG_STMMAC_PTP
+-	stmmac_ptp_init(ndev, device);
+-#endif
+-
+ 	/* MDIO bus Registration */
+ 	ret = stmmac_mdio_register(ndev);
+ 	if (ret < 0) {
+diff -uprN linux/drivers/net/ethernet/stmicro/stmmac/stmmac_ptp.c linux-new/drivers/net/ethernet/stmicro/stmmac/stmmac_ptp.c
+--- linux/drivers/net/ethernet/stmicro/stmmac/stmmac_ptp.c	2014-12-14 11:02:44.947898227 -0800
++++ linux-new/drivers/net/ethernet/stmicro/stmmac/stmmac_ptp.c	2014-12-15 11:09:09.907887871 -0800
+@@ -293,28 +293,35 @@ void stmmac_ptp_overflow_check(struct st
+ void stmmac_ptp_tx_hwtstamp(struct stmmac_priv *priv, struct dma_desc *pdma,
+ 			   struct sk_buff *skb)
+ {
+-	/* Sanity check input */
+-	if (unlikely(priv == NULL || pdma == NULL || skb == NULL)){
+-		return;
+-	}
+-
+-	if(skb_shinfo(skb)->tx_flags & SKBTX_HW_TSTAMP){
+-		struct skb_shared_hwtstamps shhwtstamps;
+-		u64 ns;
+-		u64 regval;
+-		unsigned long flags;
+-
+-		regval = (u64)pdma->ts_lo;
+-		regval |= (u64)pdma->ts_hi << 32;
+-
+-		spin_lock_irqsave(&priv->tmreg_lock, flags);
+-		ns = timecounter_cyc2time(&priv->tcnt, regval);
+-		spin_unlock_irqrestore(&priv->tmreg_lock, flags);
+-
+-		memset(&shhwtstamps, 0, sizeof(shhwtstamps));
+-		shhwtstamps.hwtstamp = ns_to_ktime(ns);
+-		skb_tstamp_tx(skb, &shhwtstamps);
+-	}
++       struct skb_shared_hwtstamps shhwtstamp;
++       u64 ns, cycles;
++       unsigned long flags;
++
++       if (!priv->hwts_tx_en)
++	 return;
++
++       /* exit if skb doesn't support hw tstamp */
++       if (likely(!skb || !(skb_shinfo(skb)->tx_flags & SKBTX_IN_PROGRESS)))
++	 return;
++
++       /* check tx tstamp status */
++       if (!priv->hw->desc->get_tx_timestamp_status((struct dma_desc *)pdma))
++	 return;
++
++       printk(KERN_ERR "Got TX timestamp\n" );
++
++       /* get the valid tstamp */
++       cycles = priv->hw->desc->get_timestamp(pdma, priv->adv_ts);
++       spin_lock_irqsave(&priv->tmreg_lock, flags);
++       ns = timecounter_cyc2time(&priv->tcnt, cycles);
++       spin_unlock_irqrestore(&priv->tmreg_lock, flags);
++
++       memset(&shhwtstamp, 0, sizeof(struct skb_shared_hwtstamps));
++       shhwtstamp.hwtstamp = ns_to_ktime(ns);
++       /* pass tstamp to stack */
++       skb_tstamp_tx(skb, &shhwtstamp);
++       
++       return;
+ }
+ 
+ /**
+@@ -329,27 +336,26 @@ void stmmac_ptp_tx_hwtstamp(struct stmma
+ void stmmac_ptp_rx_hwtstamp(struct stmmac_priv *priv, struct dma_desc *pdma,
+ 			   struct sk_buff *skb)
+ {
+-	/* Sanity check input */
+-	if (unlikely(priv == NULL || pdma == NULL || skb == NULL)){
+-		return;
+-	}
++        struct skb_shared_hwtstamps *shhwtstamp = NULL;
++        u64 ns, cycles;
++	unsigned long flags;
++
++        if (!priv->hwts_rx_en)
++                return;
++
++        /* exit if rx tstamp is not valid */
++        if (!priv->hw->desc->get_rx_timestamp_status(pdma, priv->adv_ts))
++                return;
+ 
+-	if(skb_shinfo(skb)->tx_flags & SKBTX_HW_TSTAMP){
+-		struct skb_shared_hwtstamps shhwtstamps;
+-		u64 ns;
+-		u64 regval;
+-		unsigned long flags;
+-
+-		regval = (u64)pdma->ts_lo;
+-		regval |= (u64)pdma->ts_hi << 32;
+-
+-		spin_lock_irqsave(&priv->tmreg_lock, flags);
+-		ns = timecounter_cyc2time(&priv->tcnt, regval);
+-		spin_unlock_irqrestore(&priv->tmreg_lock, flags);
++        /* get the valid tstamp */
++        cycles = priv->hw->desc->get_timestamp(pdma, priv->adv_ts);
++	spin_lock_irqsave(&priv->tmreg_lock, flags);
++	ns = timecounter_cyc2time(&priv->tcnt, cycles);
++	spin_unlock_irqrestore(&priv->tmreg_lock, flags);
+ 
+-		memset(&shhwtstamps, 0, sizeof(shhwtstamps));
+-		shhwtstamps.hwtstamp = ns_to_ktime(ns);
+-	}
++        shhwtstamp = skb_hwtstamps(skb);
++        memset(shhwtstamp, 0, sizeof(struct skb_shared_hwtstamps));
++        shhwtstamp->hwtstamp = ns_to_ktime(ns);
+ }
+ 
+ /**
+@@ -384,8 +390,11 @@ int stmmac_ptp_hwtstamp_ioctl(struct stm
+ 	if (config.flags)
+ 		return -EINVAL;
+ 
++	priv->hwts_tx_en = 0;
++	priv->hwts_rx_en = 0;
++
+ 	/* Snapshot the reg - preserve Timestamp Interrupt Trigger Enable */
+-	tsctl = readl(priv->ioaddr + GMAC_TS_CTRL) & GMAC_TS_CTRL_TSTRIG;
++	tsctl = readl(priv->ioaddr + GMAC_TS_CTRL) & (GMAC_TS_CTRL_TSTRIG | GMAC_TS_CTRL_TSENA);
+ 
+ 	/* TX */
+ 	switch (config.tx_type) {
+@@ -395,6 +404,7 @@ int stmmac_ptp_hwtstamp_ioctl(struct stm
+ 		break;
+ 	case HWTSTAMP_TX_ON:
+ 		priv->hwts |= STMMAC_PTP_HWTS_TX_EN;
++		priv->hwts_tx_en = 1;
+ 		printk(KERN_INFO "%s set TX PTP en true\n", __func__);
+ 		break;
+ 	default:
+@@ -403,6 +413,7 @@ int stmmac_ptp_hwtstamp_ioctl(struct stm
+ 
+ 	/* RX */
+ 	priv->hwts |= STMMAC_PTP_HWTS_RX_EN;
++	priv->hwts_rx_en = 1;
+ 
+ 	switch (config.rx_filter) {
+ 
+@@ -577,17 +588,18 @@ int stmmac_ptp_hwtstamp_ioctl(struct stm
+ 
+ 	case HWTSTAMP_FILTER_NONE:
+ 		printk(KERN_INFO "%s HWTSTAMP_FILTER_NONE  \n", __func__);
++		priv->hwts_rx_en = 0;
+ 		priv->hwts &= ~STMMAC_PTP_HWTS_RX_EN;
+ 		break;
+ 
+ 	default:
+ 		printk(KERN_INFO "%s error ioctl rx type %d \n", __func__, config.rx_filter);
++		priv->hwts_rx_en = 0;
+ 		/* bad/unknown parameter */
+ 		return -ERANGE;
+ 	}
+ 
+ 	/* Set the TS CTRL reg */
+-	tsctl |= GMAC_TS_CTRL_TSENA;
+ 	writel(tsctl, priv->ioaddr + GMAC_TS_CTRL);
+ 	wmb();
+ 
+@@ -597,6 +609,19 @@ int stmmac_ptp_hwtstamp_ioctl(struct stm
+ 		-EFAULT : 0;
+ }
+ 
++/**
++ * stmmac_ptp_deinit_timestamp - stop all PTP clock/timestamping activity
++ * @priv - pointer to the priv structure
++ *
++ */
++static void stmmac_ptp_deinit_timestamp(struct stmmac_priv *priv)
++{
++	priv->hwts_tx_en = 0;
++	priv->hwts_rx_en = 0;
++
++	writel(0, priv->ioaddr + GMAC_TS_CTRL);
++	wmb();  
++}
+ 
+ #define DEFAULT_PTP_CLK 50
+ 
+@@ -609,10 +634,15 @@ int stmmac_ptp_hwtstamp_ioctl(struct stm
+  */
+ static void stmmac_ptp_init_timestamp(struct stmmac_priv *priv)
+ {
+-	unsigned long tsctl = GMAC_TS_CTRL_TSENA, flags = 0;
++	unsigned long tsctl = GMAC_TS_CTRL_TSENA | GMAC_TS_CTRL_TSCTRLSSR,
++	  flags = 0;
++	int limit;
+ 	uint8_t ssinc = CONFIG_STMMAC_PTP_CLK_MHZ;
+ 
+-	/* Enable TS */	
++	/* Make sure Timestamp unit is reset */
++	stmmac_ptp_deinit_timestamp(priv);
++
++	/* Enable TS */
+ 	writel(tsctl, priv->ioaddr + GMAC_TS_CTRL);
+ 	wmb();
+ 
+@@ -626,19 +656,49 @@ static void stmmac_ptp_init_timestamp(st
+ 
+ 	printk(KERN_INFO "%s setting PTP_CLK to 0x%02x\n", __func__, ssinc);
+ 
++       /* wait for present addend update to complete */
++        limit = 10;
++        while (limit--) {
++                if (!(readl(priv->ioaddr + GMAC_TS_CTRL) & GMAC_TS_CTRL_TSADDREG))
++                        break;
++                mdelay(10);
++        }
++        if (limit < 0)
++                printk( KERN_ERR "%s Error setting PTP increment value\n", __func__);
++
+ 	/* Reset system time registers to zero */
+ 	writel(0x00000000, priv->ioaddr + GMAC_ST_SEC);
+ 	writel(0x00000000, priv->ioaddr + GMAC_ST_NSEC);
+ 	wmb();
+ 
+ 	/* Set TSINT to latch values in ST_SEC and ST_NSEC */
++	tsctl = readl( priv->ioaddr + GMAC_TS_CTRL );
+ 	tsctl |= GMAC_TS_CTRL_TSINT;
+ 	writel(tsctl, priv->ioaddr + GMAC_TS_CTRL);
+ 	wmb();
+-	printk(KERN_INFO "%s tsctl == 0x%08lx (TSINIT | TSENA)\n", __func__, tsctl);
++
++        /* wait for present system time initialize to complete */
++        limit = 10;
++        while (limit--) {
++	  tsctl = readl( priv->ioaddr + GMAC_TS_CTRL );
++	  printk(KERN_INFO "%s tsctl == 0x%08lx [Polling...]\n", __func__, tsctl);
++	  if ( !(tsctl & GMAC_TS_CTRL_TSINT))
++	    break;
++	  mdelay(10);
++        }
++        if (limit < 0)
++                printk( KERN_ERR "%s Error setting PTP system time\n", __func__);
+ 
+ 	spin_lock_irqsave(&priv->tmreg_lock, flags);
+ 
++	priv->hwts_tx_en = 0;
++	priv->hwts_rx_en = 0;
++
++        if (priv->dma_cap.atime_stamp && priv->plat->enh_desc)
++                priv->adv_ts = 1;
++	else
++	  priv->adv_ts = 0;
++
+ 	/* Init timecounter */
+ 	memset(&priv->ccnt, 0, sizeof(priv->ccnt));
+ 	priv->ccnt.read = stmmac_ptp_read;
+@@ -714,6 +774,8 @@ void stmmac_ptp_remove(struct stmmac_pri
+ 	/* stop the overflow check task */
+ //	priv->hwts &= ~STMMAC_PTP_OVERFLOW_CHECK_ENABLED;
+ 
++	stmmac_ptp_deinit_timestamp(priv);
++
+ 	if (priv->ptp_clock != NULL) {
+ 		ptp_clock_unregister(priv->ptp_clock);
+ 		priv->ptp_clock = NULL;
