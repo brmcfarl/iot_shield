@@ -1,0 +1,825 @@
+<session jtag_chain="Galileo IoT Shield [USB-1]" jtag_device="@1: EP4CGX30CF23 (0x028230DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="506"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup hierarchy dummy_svr:CSI" value="3"/>
+      <single attribute="setup hierarchy scfifo:fifo_32" value="3"/>
+      <single attribute="setup hierarchy xillydemo" value="1"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="128"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="960"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2015/03/02 12:46:10  #0">
+      <clock name="xillybus:xillybus_ins|clk_125" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="4096" trigger_in_enable="no" trigger_out_enable="no" trigger_out_pin="auto_stp_trigger_out_0"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="current_state.DATA_TRANSFER" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_COLUMNS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_CONFIG" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_ENABLE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_ROWS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WAIT" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WAIT_FOR_FS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_COLUMNS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_CONFIG" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_EMPTY" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_FE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_FULL" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_FULL" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ROWS" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|wrreq" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_d1" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_d2" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpck_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpck_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd1_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd1_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd2_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd2_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|read" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_fe" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_fs" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_le" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_ls" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel_valid" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|write" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[9]" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="current_state.DATA_TRANSFER" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_COLUMNS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_CONFIG" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_ENABLE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_ROWS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WAIT" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WAIT_FOR_FS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_COLUMNS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_CONFIG" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_EMPTY" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_FE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_FULL" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_FULL" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ROWS" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|wrreq" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_d1" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_d2" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpck_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpck_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd1_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd1_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd2_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd2_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|read" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_fe" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_fs" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_le" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_ls" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel_valid" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|write" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[9]" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="current_state.DATA_TRANSFER" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_COLUMNS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_CONFIG" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_ENABLE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.READ_ROWS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WAIT" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WAIT_FOR_FS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_COLUMNS" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_CONFIG" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_EMPTY" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_FE" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ENABLE_FROM_FULL" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_FULL" tap_mode="classic" type="combinatorial"/>
+          <wire name="current_state.WRITE_ROWS" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="scfifo:fifo_32|wrreq" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|address[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_d1" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|hs_d2" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpck_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpck_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd1_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd1_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd2_n" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|lpd2_p" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|read" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|readdata[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_fe" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_fs" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_le" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_ls" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|svr_pixel_valid" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|write" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="svr_lt2:CSI|writedata[9]" tap_mode="classic" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="current_state.DATA_TRANSFER"/>
+          <net is_signal_inverted="no" name="current_state.READ_COLUMNS"/>
+          <net is_signal_inverted="no" name="current_state.READ_CONFIG"/>
+          <net is_signal_inverted="no" name="current_state.READ_ENABLE"/>
+          <net is_signal_inverted="no" name="current_state.READ_ROWS"/>
+          <net is_signal_inverted="no" name="current_state.WAIT"/>
+          <net is_signal_inverted="no" name="current_state.WAIT_FOR_FS"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_COLUMNS"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_CONFIG"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE_FROM_EMPTY"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE_FROM_FE"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE_FROM_FULL"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_FULL"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ROWS"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|address" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|hs_clk"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|hs_d1"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|hs_d2"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpck_n"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpck_p"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd1_n"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd1_p"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd2_n"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd2_p"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|read"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|readdata" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[31]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[30]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[29]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[28]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[27]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[26]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[25]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[24]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[23]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[22]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[21]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[20]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[19]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[18]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[17]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[16]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[15]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[14]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[13]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[12]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[11]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[10]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[9]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[8]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[7]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[6]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_fe"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_fs"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_le"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_ls"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|svr_pixel" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[9]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[8]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[7]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[6]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel_valid"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|write"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|writedata" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[31]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[30]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[29]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[28]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[27]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[26]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[25]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[24]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[23]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[22]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[21]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[20]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[19]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[18]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[17]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[16]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[15]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[14]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[13]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[12]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[11]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[10]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[9]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[8]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[7]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[6]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="scfifo:fifo_32|data" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[31]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[30]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[29]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[28]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[27]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[26]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[25]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[24]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[23]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[22]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[21]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[20]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[19]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[18]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[17]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[16]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[15]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[14]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[13]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[12]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[11]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[10]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[9]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[8]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[7]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[6]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[5]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[4]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[3]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[2]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[1]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="scfifo:fifo_32|wrreq"/>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="current_state.DATA_TRANSFER"/>
+          <net is_signal_inverted="no" name="current_state.READ_COLUMNS"/>
+          <net is_signal_inverted="no" name="current_state.READ_CONFIG"/>
+          <net is_signal_inverted="no" name="current_state.READ_ENABLE"/>
+          <net is_signal_inverted="no" name="current_state.READ_ROWS"/>
+          <net is_signal_inverted="no" name="current_state.WAIT"/>
+          <net is_signal_inverted="no" name="current_state.WAIT_FOR_FS"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_COLUMNS"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_CONFIG"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE_FROM_EMPTY"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE_FROM_FE"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ENABLE_FROM_FULL"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_FULL"/>
+          <net is_signal_inverted="no" name="current_state.WRITE_ROWS"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|address" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|address[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|hs_clk"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|hs_d1"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|hs_d2"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpck_n"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpck_p"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd1_n"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd1_p"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd2_n"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|lpd2_p"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|read"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|readdata" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[31]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[30]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[29]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[28]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[27]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[26]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[25]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[24]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[23]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[22]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[21]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[20]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[19]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[18]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[17]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[16]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[15]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[14]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[13]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[12]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[11]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[10]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[9]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[8]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[7]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[6]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|readdata[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_fe"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_fs"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_le"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_ls"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|svr_pixel" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[9]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[8]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[7]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[6]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|svr_pixel_valid"/>
+          <net is_signal_inverted="no" name="svr_lt2:CSI|write"/>
+          <bus is_signal_inverted="no" link="all" name="svr_lt2:CSI|writedata" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[31]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[30]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[29]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[28]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[27]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[26]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[25]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[24]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[23]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[22]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[21]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[20]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[19]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[18]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[17]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[16]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[15]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[14]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[13]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[12]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[11]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[10]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[9]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[8]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[7]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[6]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[5]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[4]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[3]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[2]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[1]"/>
+            <net is_signal_inverted="no" name="svr_lt2:CSI|writedata[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="scfifo:fifo_32|data" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[31]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[30]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[29]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[28]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[27]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[26]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[25]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[24]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[23]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[22]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[21]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[20]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[19]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[18]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[17]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[16]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[15]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[14]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[13]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[12]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[11]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[10]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[9]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[8]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[7]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[6]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[5]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[4]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[3]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[2]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[1]"/>
+            <net is_signal_inverted="no" name="scfifo:fifo_32|data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="scfifo:fifo_32|wrreq"/>
+        </setup_view>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2015/03/02 12:46:10  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="4096" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">'current_state.WAIT' == falling edge
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="column width" size="23" value="34,34,203,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,119"/>
+    <multi attribute="frame size" size="2" value="1920,1058"/>
+    <multi attribute="jtag widget size" size="2" value="334,120"/>
+  </global_info>
+</session>
