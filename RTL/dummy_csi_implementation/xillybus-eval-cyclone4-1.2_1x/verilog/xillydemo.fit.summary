@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Feb 28 16:39:41 2015
+Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
+Revision Name : xillydemo
+Top-level Entity Name : xillydemo
+Family : Cyclone IV GX
+Device : EP4CGX30CF23C7
+Timing Models : Final
+Total logic elements : 8,740 / 29,440 ( 30 % )
+    Total combinational functions : 6,701 / 29,440 ( 23 % )
+    Dedicated logic registers : 6,048 / 29,440 ( 21 % )
+Total registers : 6048
+Total pins : 18 / 307 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 751,200 / 1,105,920 ( 68 % )
+Embedded Multiplier 9-bit elements : 0 / 160 ( 0 % )
+Total GXB Receiver Channel PCS : 1 / 4 ( 25 % )
+Total GXB Receiver Channel PMA : 1 / 4 ( 25 % )
+Total GXB Transmitter Channel PCS : 1 / 4 ( 25 % )
+Total GXB Transmitter Channel PMA : 1 / 4 ( 25 % )
+Total PLLs : 2 / 6 ( 33 % )
