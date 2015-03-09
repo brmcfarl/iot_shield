@@ -1,5 +1,5 @@
 To enable PTP timestamping in the Galileo kernel, apply to patch
-(chall_ptp.patch) to the kernel source and recompile.
+(galileo_ptp_20150305.patch.xz) to the kernel source and recompile.
 
 The following kernel options should be enabled statically:
     -PHY timestamping
