@@ -10,10 +10,10 @@ user_led[0] <= xillybus:xillybus_ins.user_led
 user_led[1] <= xillybus:xillybus_ins.user_led
 user_led[2] <= xillybus:xillybus_ins.user_led
 user_led[3] <= xillybus:xillybus_ins.user_led
-our_led[0] <= our_led[0].DB_MAX_OUTPUT_PORT_TYPE
-our_led[1] <= our_led[1].DB_MAX_OUTPUT_PORT_TYPE
+our_led[0] <= noCounter.DB_MAX_OUTPUT_PORT_TYPE
+our_led[1] <= <GND>
 our_led[2] <= <GND>
-our_led[3] <= our_led[1].DB_MAX_OUTPUT_PORT_TYPE
+our_led[3] <= <GND>
 i2c_scl <> <UNC>
 i2c_sda <> <UNC>
 lpck_p => lpck_p.IN1

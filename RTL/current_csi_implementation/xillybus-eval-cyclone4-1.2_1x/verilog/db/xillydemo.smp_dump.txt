@@ -1,21 +1,22 @@
 
 State Machine - |xillydemo|current_state
-Name current_state.WRITE_ENABLE_FROM_FE current_state.WRITE_ENABLE_FROM_EMPTY current_state.WRITE_ENABLE_FROM_FULL current_state.WRITE_CONFIG current_state.READ_CONFIG current_state.WRITE_ROWS current_state.WRITE_FULL current_state.WAIT_FOR_FS current_state.DATA_TRANSFER current_state.READ_ENABLE current_state.READ_COLUMNS current_state.READ_ROWS current_state.WRITE_ENABLE current_state.WRITE_COLUMNS current_state.WAIT 
-current_state.WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-current_state.WRITE_COLUMNS 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-current_state.WRITE_ENABLE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-current_state.READ_ROWS 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-current_state.READ_COLUMNS 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-current_state.READ_ENABLE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-current_state.DATA_TRANSFER 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-current_state.WAIT_FOR_FS 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-current_state.WRITE_FULL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-current_state.WRITE_ROWS 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-current_state.READ_CONFIG 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_CONFIG 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ENABLE_FROM_FULL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ENABLE_FROM_EMPTY 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ENABLE_FROM_FE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name current_state.WRITE_ENABLE_FROM_FE current_state.WRITE_ENABLE_FROM_EMPTY current_state.WRITE_ENABLE_FROM_FULL current_state.WRITE_CONFIG current_state.READ_CONFIG current_state.WRITE_ROWS current_state.WRITE_FULL current_state.WAIT_FOR_FS current_state.DATA_TRANSFER current_state.READ_ENABLE current_state.READ_COLUMNS current_state.READ_ROWS current_state.WRITE_ENABLE current_state.WRITE_COLUMNS current_state.WAIT current_state.WRITE_CONFIG_ALL 
+current_state.WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.WRITE_COLUMNS 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 
+current_state.WRITE_ENABLE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 
+current_state.READ_ROWS 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 
+current_state.READ_COLUMNS 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 
+current_state.READ_ENABLE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 
+current_state.DATA_TRANSFER 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 
+current_state.WAIT_FOR_FS 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 
+current_state.WRITE_FULL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 
+current_state.WRITE_ROWS 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 
+current_state.READ_CONFIG 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 
+current_state.WRITE_CONFIG 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 
+current_state.WRITE_ENABLE_FROM_FULL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 
+current_state.WRITE_ENABLE_FROM_EMPTY 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+current_state.WRITE_ENABLE_FROM_FE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+current_state.WRITE_CONFIG_ALL 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
 
 State Machine - |xillydemo|svr_lt2:CSI|SVRWXaIp:SVRYyaRh|SVRoGpos:SVRtJDZZ|SVRuPrNG:SVRuPrNG|SVRXSJFV
 Name SVRXSJFV.SVRsdNEU SVRXSJFV.SVRBUADa SVRXSJFV.SVRghRLy 

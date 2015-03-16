@@ -1,8 +1,3 @@
-/*
-*	Still a work in progress, seems that the camera registers
-*	are not correctly configured
-*/
-
 module xillydemo
   (
    input  clk_50,
@@ -28,8 +23,8 @@ module xillydemo
 
    );
 	
-	localparam [3:0] WRITE_ROWS=1, WRITE_COLUMNS=2, WRITE_ENABLE=3, READ_ROWS=4, READ_COLUMNS=5, READ_ENABLE=6, DATA_TRANSFER=7, WAIT_FOR_FS=8,WRITE_FULL=9,WAIT=10, READ_CONFIG=11,WRITE_CONFIG=12,WRITE_ENABLE_FROM_FULL=13,WRITE_ENABLE_FROM_EMPTY=14,WRITE_ENABLE_FROM_FE=15,S_0=0;
-	reg [3:0] current_state,next_state;
+	localparam [4:0] WRITE_ROWS=1, WRITE_COLUMNS=2, WRITE_ENABLE=3, READ_ROWS=4, READ_COLUMNS=5, READ_ENABLE=6, DATA_TRANSFER=7, WAIT_FOR_FS=8,WRITE_FULL=9,WAIT=10, READ_CONFIG=11,WRITE_CONFIG=12,WRITE_ENABLE_FROM_FULL=13,WRITE_ENABLE_FROM_EMPTY=14,WRITE_ENABLE_FROM_FE=15,WRITE_CONFIG_ALL=16,S_0=0;
+	reg [4:0] current_state,next_state;
    // Clock and quiesce
    wire 	bus_clk;
    wire 	quiesce;
@@ -317,6 +312,8 @@ module xillydemo
 	reg [1:0] write_flag;
 	reg [15:0] counter_clk;
 	reg [3:0] current;
+	reg [3:0] lsCounter, leCounter;
+	reg  noCounter;
 	always @(posedge bus_clk)
 	begin
 		
@@ -327,11 +324,14 @@ module xillydemo
 			read_flag <= 0;
 			write_flag <= 0;
 			counter_clk <= 0;
+			lsCounter <= 0;
+			leCounter <= 0;
+			noCounter <= 0;
 		end
 		else 
 		begin
 			current_state <= next_state;
-			if(current_state == WRITE_ROWS || current_state == WRITE_COLUMNS || current_state == WRITE_ENABLE || current_state == WRITE_CONFIG || current_state == WRITE_ENABLE_FROM_FULL || current_state == WRITE_ENABLE_FROM_EMPTY || current_state == WRITE_ENABLE_FROM_FE)
+			if(current_state == WRITE_ROWS || current_state == WRITE_COLUMNS || current_state == WRITE_CONFIG_ALL || current_state == WRITE_ENABLE || current_state == WRITE_CONFIG || current_state == WRITE_ENABLE_FROM_FULL || current_state == WRITE_ENABLE_FROM_EMPTY || current_state == WRITE_ENABLE_FROM_FE)
 			begin
 				if(write_flag == 2)
 				begin
@@ -354,6 +354,22 @@ module xillydemo
 					read_flag <= read_flag + 1;
 				end
 			end
+			if(current_state == DATA_TRANSFER)
+			begin
+				if(svr_ls)
+				begin
+					if(lsCounter != leCounter)
+					begin
+						noCounter <= noCounter + 1;
+					end
+					lsCounter <= lsCounter + 1;
+				end
+				if(svr_le)
+				begin
+					leCounter <= leCounter + 1;
+					
+				end
+			end
 		end	
 		
 	end
@@ -362,7 +378,7 @@ module xillydemo
 	begin
 	
 		reset_n = ~buttons_held[1];
-		our_led = current;
+		our_led = noCounter;
 		
 		write = 0;
 		read = 0;
@@ -374,7 +390,14 @@ module xillydemo
 		next_state = current_state;
 		current = 0;
 		
-		
+		/*if(lsCounter == 1023)
+		begin
+			our_led = 4'b0001;
+		end
+		else if(leCounter == 1023)
+		begin
+			our_led = 4'b1001;
+		end*/
 		/*if(buttons_held[1])
 		begin
 			next_state = WAIT;
@@ -442,6 +465,12 @@ module xillydemo
 						//output_fifo = readdata;
 						//write_request = 1'b1;
 						next_state = WRITE_CONFIG;
+				  end
+				  else if (user_r_read_8_data == 8'b01101001) //i - read and output enable at 32
+				  begin
+						//output_fifo = readdata;
+						//write_request = 1'b1;
+						next_state = WRITE_CONFIG_ALL;
 				  end
 				  else
 				  begin
@@ -597,27 +626,50 @@ module xillydemo
 					begin
 						address = 1;
 						write = 1'b1;
+						writedata = 2;
+					end
+				end
+				WRITE_CONFIG_ALL:
+				begin
+					if(write_flag == 2)
+					begin
+						next_state = WAIT;
+					end
+					else
+					begin
+						address = 1;
+						write = 1'b1;
 						writedata = 3;
 					end
 				end
-				DATA_TRANSFER:
+				DATA_TRANSFER:						 //DATA TRANFSER
 				begin
-					//if(svr_pixel_valid)
-					//begin
+					if(svr_le == 0)
+					begin
 						write_request = svr_pixel_valid;
-						output_fifo = svr_pixel;
-					//end
-					//else
-					//begin
-						//write_request = 1'b0;
-					//end
+						//if(svr_pixel_valid)
+						//begin
+							
+							output_fifo = svr_pixel;
+						//end
+						//else
+						//begin
+							//write_request = 1'b0;
+						//end
+					end
+					
 					if(user_w_write_32_full == 1'b1)
 					begin
 						//address = 0;
 						//write = 1'b1;
 						//writedata = 0;
 						//write_request = 1'b0;
-						write_request = 1'b0;
+						//write_request = 1'b0;
+						write_request = svr_pixel_valid;
+					//if(svr_pixel_valid)
+					//begin
+						
+						output_fifo = svr_pixel;
 						next_state = WRITE_ENABLE_FROM_FULL;
 					end
 					else
@@ -647,14 +699,6 @@ module xillydemo
 					begin
 					
 					end
-					if (user_r_read_8_data == 8'b01100110) //f - read and output enable at 32
-				  begin
-						//address = 0;
-						//read = 1'b1;
-						//output_fifo = readdata;
-						//write_request = 1'b1;
-						next_state = READ_ENABLE;
-				  end
 				end
 				WRITE_FULL:
 				begin
@@ -674,13 +718,20 @@ module xillydemo
 				begin
 					if(write_flag == 2)
 					begin
+						write = 1'b1;
 						next_state = WRITE_FULL;
+						write_request = 0;
 					end
 					else
 					begin
 						address = 0;
 						write = 1'b1;
 						writedata = 0;
+						write_request = svr_pixel_valid;
+						//if(svr_pixel_valid)
+						//begin
+						
+						output_fifo = svr_pixel;
 					
 					end
 				end
@@ -688,6 +739,7 @@ module xillydemo
 				begin
 					if(write_flag == 2)
 					begin
+						write = 1'b1;
 						next_state = DATA_TRANSFER;
 					end
 					else
