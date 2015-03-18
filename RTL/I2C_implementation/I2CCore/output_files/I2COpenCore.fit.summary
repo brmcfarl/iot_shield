@@ -1,17 +1,17 @@
-Fitter Status : Successful - Wed Feb 25 02:26:25 2015
+Fitter Status : Successful - Wed Mar 18 01:56:39 2015
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
 Revision Name : I2COpenCore
 Top-level Entity Name : I2COpenCore
 Family : Cyclone IV GX
 Device : EP4CGX30CF23C7
 Timing Models : Final
-Total logic elements : 2,265 / 29,440 ( 8 % )
-    Total combinational functions : 1,135 / 29,440 ( 4 % )
-    Dedicated logic registers : 1,903 / 29,440 ( 6 % )
-Total registers : 1903
-Total pins : 13 / 307 ( 4 % )
+Total logic elements : 1,439 / 29,440 ( 5 % )
+    Total combinational functions : 1,095 / 29,440 ( 4 % )
+    Dedicated logic registers : 886 / 29,440 ( 3 % )
+Total registers : 886
+Total pins : 21 / 307 ( 7 % )
 Total virtual pins : 0
-Total memory bits : 884,736 / 1,105,920 ( 80 % )
+Total memory bits : 655,360 / 1,105,920 ( 59 % )
 Embedded Multiplier 9-bit elements : 0 / 160 ( 0 % )
 Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
 Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )

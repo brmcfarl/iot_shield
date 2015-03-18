@@ -1,18 +1,16 @@
 
 State Machine - |I2COpenCore|current_state
-Name current_state.SEND_WRITE_I2C_NEEDS_UPPER_ADDRESS current_state.WAIT_TRANSFER_TIP_SENDING_DATA current_state.WAIT_TRANSFER_TIP_COMES_FROM_SEND_WRITE_I2C_NEEDS_UPPER_ADDRESS current_state.SEND_WRITE_I2C_NEEDS_LOWER_ADDRESS current_state.WAIT_TRANSFER_TIP_COMES_FROM_SEND_WRITE_I2C_SEND_DATA current_state.WAIT_TRANSFER_TIP_COMES_FROM_SEND_WRITE_I2C_NEEDS_LOWER_ADDRESS current_state.STOP_I2C current_state.SEND_WRITE_I2C current_state.WAIT_TRANSFER_TIP_COMES_FROM_INIT_I2C current_state.INIT_I2C current_state.SET_SLAVE_ADDR current_state.WAIT 
-current_state.WAIT 0 0 0 0 0 0 0 0 0 0 0 0 
-current_state.SET_SLAVE_ADDR 0 0 0 0 0 0 0 0 0 0 1 1 
-current_state.INIT_I2C 0 0 0 0 0 0 0 0 0 1 0 1 
-current_state.WAIT_TRANSFER_TIP_COMES_FROM_INIT_I2C 0 0 0 0 0 0 0 0 1 0 0 1 
-current_state.SEND_WRITE_I2C 0 0 0 0 0 0 0 1 0 0 0 1 
-current_state.STOP_I2C 0 0 0 0 0 0 1 0 0 0 0 1 
-current_state.WAIT_TRANSFER_TIP_COMES_FROM_SEND_WRITE_I2C_NEEDS_LOWER_ADDRESS 0 0 0 0 0 1 0 0 0 0 0 1 
-current_state.WAIT_TRANSFER_TIP_COMES_FROM_SEND_WRITE_I2C_SEND_DATA 0 0 0 0 1 0 0 0 0 0 0 1 
-current_state.SEND_WRITE_I2C_NEEDS_LOWER_ADDRESS 0 0 0 1 0 0 0 0 0 0 0 1 
-current_state.WAIT_TRANSFER_TIP_COMES_FROM_SEND_WRITE_I2C_NEEDS_UPPER_ADDRESS 0 0 1 0 0 0 0 0 0 0 0 1 
-current_state.WAIT_TRANSFER_TIP_SENDING_DATA 0 1 0 0 0 0 0 0 0 0 0 1 
-current_state.SEND_WRITE_I2C_NEEDS_UPPER_ADDRESS 1 0 0 0 0 0 0 0 0 0 0 1 
+Name current_state.SEND_WRITE_STOP current_state.SET_LAST_DATA current_state.WAIT_TRANSFER_DONE current_state.SEND_WRITE_TO_DEVICE current_state.SET_DATA_TO_DEVICE current_state.WAIT_FOR_TIP_FROM_STEP_2 current_state.WRITE_START_AND_WRITE current_state.WRITE_SLAVE_ADDRESS current_state.ENABLE_CORE current_state.WAIT 
+current_state.WAIT 0 0 0 0 0 0 0 0 0 0 
+current_state.ENABLE_CORE 0 0 0 0 0 0 0 0 1 1 
+current_state.WRITE_SLAVE_ADDRESS 0 0 0 0 0 0 0 1 0 1 
+current_state.WRITE_START_AND_WRITE 0 0 0 0 0 0 1 0 0 1 
+current_state.WAIT_FOR_TIP_FROM_STEP_2 0 0 0 0 0 1 0 0 0 1 
+current_state.SET_DATA_TO_DEVICE 0 0 0 0 1 0 0 0 0 1 
+current_state.SEND_WRITE_TO_DEVICE 0 0 0 1 0 0 0 0 0 1 
+current_state.WAIT_TRANSFER_DONE 0 0 1 0 0 0 0 0 0 1 
+current_state.SET_LAST_DATA 0 1 0 0 0 0 0 0 0 1 
+current_state.SEND_WRITE_STOP 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|c_state
 Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 

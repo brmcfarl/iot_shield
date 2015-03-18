@@ -133,14 +133,14 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :      
 GND+                         : AB12      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB14      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB19      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB22      :        :                   :         : 4         :                
+user_sw[0]                   : AB15      : input  : 2.5 V             :         : 4         : Y              
+user_sw[1]                   : AB16      : input  : 2.5 V             :         : 4         : Y              
+user_sw[2]                   : AB17      : input  : 2.5 V             :         : 4         : Y              
+user_sw[3]                   : AB18      : input  : 2.5 V             :         : 4         : Y              
+user_sw[4]                   : AB19      : input  : 2.5 V             :         : 4         : Y              
+user_sw[5]                   : AB20      : input  : 2.5 V             :         : 4         : Y              
+user_sw[6]                   : AB21      : input  : 2.5 V             :         : 4         : Y              
+user_sw[7]                   : AB22      : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 8         :                
 GND                          : B2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
