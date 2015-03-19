@@ -177,7 +177,7 @@ wire [4:0] color_select = horizotal_select + vertical_select ;
 
 wire color = (frame_counter[4] ^ color_select[0]);
 
-assign svr_pixel = (color==1'b1)? 10'd1023: 9'd2;
+assign svr_pixel = (color==1'b1)? 10'd1023: 9'd0;
 
 assign svr_fs = ((row_counter == 12'd0) && (col_counter == 12'd0) && (enable == 1'b1))? 1'b1: 1'b0;
 

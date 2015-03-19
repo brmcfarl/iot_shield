@@ -290,13 +290,6 @@ module xillydemo
 	);
 			  
 	reg write_request = 1'b0;	
-	//reg [1:0] counter_wr = 3'b000;
-	//reg [6:0] counter_full = 6'b000000;
-	//reg data_init = 1'b0;
-	//reg data_transfer = 1'b0;
-	//reg full_happened = 1'b0;
-	//reg transmission = 1'b0;
-	//reg [1:0]counter_wr_csi = 2'b00;
 	reg [1:0] read_flag;
 	reg [1:0] write_flag;
 	reg [15:0] counter_clk;
@@ -373,97 +366,37 @@ module xillydemo
 		read = 0;
 		address = 0;
 		writedata = 0;
-		//readdata = 0;
 		write_request = 0;
 		output_fifo = 0;
 		next_state = current_state;
 		current = 0;
-		
-		/*if(lsCounter == 1023)
-		begin
-			our_led = 4'b0001;
-		end
-		else if(leCounter == 1023)
-		begin
-			our_led = 4'b1001;
-		end*/
-		/*if(buttons_held[1])
-		begin
-			next_state = WAIT;
-		end
-		else 
-		begin*/
 			case(current_state)
 				WAIT:
 				begin
 					current = 1;
 				  if(user_r_read_8_data == 8'b01100001) //a - write rows
 				  begin	
-						//address = 1;
-						//write = 1'b1;
-						//writedata = 16'd1080;
 						next_state = WRITE_ROWS;
 				  end
 				  else if (user_r_read_8_data == 8'b01100010) //b - write columns
 				  begin
-						//address = 2;
-						//write = 1'b1;
-						//writedata = 16'd1920;
 						next_state = WRITE_COLUMNS;
 				  end
 				  else if (user_r_read_8_data == 8'b01100011) //c - write enable
 				  begin
-						//address = 0;
-						//write = 1'b1;
-						//writedata = 1;
 						next_state = WRITE_ENABLE;
 				  end
 				  else if (user_r_read_8_data == 8'b01100100) //d - read and output rows at 32
 				  begin
-						
-						//address = 1;
-						//read = 1'b1;
 						next_state = READ_ROWS;
 				  end
 				  else if (user_r_read_8_data == 8'b01100101) //e - read and output columns at 32
 				  begin
-						//address = 2;
-						//read = 1'b1;
-						//output_fifo = readdata;
-						//write_request = 1'b1;
 						next_state = READ_COLUMNS;
 				  end
 				  else if (user_r_read_8_data == 8'b01100110) //f - read and output enable at 32
 				  begin
-						//address = 0;
-						//read = 1'b1;
-						//output_fifo = readdata;
-						//write_request = 1'b1;
 						next_state = READ_ENABLE;
-				  end
-				  else if (user_r_read_8_data == 8'b01100111) //g - read and output enable at 32
-				  begin
-						//address = 6'h1;
-						//read = 1'b1;
-						//output_fifo = readdata;
-						//write_request = 1'b1;
-						next_state = READ_CONFIG;
-				  end
-				  else if (user_r_read_8_data == 8'b01101000) //h - read and output enable at 32
-				  begin
-						//output_fifo = readdata;
-						//write_request = 1'b1;
-						next_state = WRITE_CONFIG;
-				  end
-				  else if (user_r_read_8_data == 8'b01101001) //i - read and output enable at 32
-				  begin
-						//output_fifo = readdata;
-						//write_request = 1'b1;
-						next_state = WRITE_CONFIG_ALL;
-				  end
-				  else
-				  begin
-				  
 				  end
 				end
 				WRITE_ROWS:
@@ -478,9 +411,6 @@ module xillydemo
 						write = 1'b1;
 						writedata = 16'd1080;
 					end
-					
-					//wait_flag = 1;
-					//next_state = WAIT;
 				end
 				WRITE_COLUMNS:
 				begin
@@ -514,9 +444,6 @@ module xillydemo
 					
 					if(read_flag == 2)
 					begin
-						
-						//output_fifo = readdata;
-						//write_request = 1'b1;
 						next_state = WAIT;
 					end
 					else if(read_flag == 1)
@@ -528,20 +455,14 @@ module xillydemo
 					end
 					else
 					begin
-						//write_request = 1'b1;
-						
 						read = 1'b1;
 						address = 1;
-					end
-					//wait_flag = 1;
-					
+					end	
 				end
 				READ_COLUMNS:
 				begin
 					if(read_flag == 2)
-					begin
-						
-						
+					begin				
 						next_state = WAIT;
 					end
 					else if(read_flag == 1)
@@ -553,8 +474,6 @@ module xillydemo
 					end
 					else
 					begin
-						//write_request = 1'b1;
-						//output_fifo = readdata;
 						read = 1'b1;
 						address = 2;
 					end
@@ -563,8 +482,6 @@ module xillydemo
 				begin
 					if(read_flag == 2)
 					begin
-						
-						
 						next_state = WAIT;
 					end
 					else if(read_flag == 1)
@@ -576,79 +493,16 @@ module xillydemo
 					end
 					else
 					begin
-						//write_request = 1'b1;
-						//output_fifo = readdata;
 						read = 1'b1;
 						address = 0;
-					end
-				end
-				READ_CONFIG:
-				begin
-					if(read_flag == 2)
-					begin
-						
-						
-						next_state = WAIT;
-					end
-					else if(read_flag == 1)
-					begin
-						output_fifo = readdata;
-						write_request = 1'b1;
-						read = 1'b1;
-						address = 6'h1;
-					end
-					else
-					begin
-						//write_request = 1'b1;
-						//output_fifo = readdata;
-						read = 1'b1;
-						address = 6'h1;
-					end
-				end
-				WRITE_CONFIG:
-				begin
-					if(write_flag == 2)
-					begin
-						next_state = WAIT;
-					end
-					else
-					begin
-						address = 1;
-						write = 1'b1;
-						writedata = 2;
-					end
-				end
-				WRITE_CONFIG_ALL:
-				begin
-					if(write_flag == 2)
-					begin
-						next_state = WAIT;
-					end
-					else
-					begin
-						address = 1;
-						write = 1'b1;
-						writedata = 3;
 					end
 				end
 				DATA_TRANSFER:						 //DATA TRANFSER
 				begin
 					write_request = svr_pixel_valid;
-					//if(svr_pixel_valid)
-					//begin
-						
-						output_fifo = svr_pixel;
-					//end
-					//else
-					//begin
-						//write_request = 1'b0;
-					//end
+					output_fifo = svr_pixel;
 					if(user_w_write_32_full == 1'b1)
 					begin
-						//address = 0;
-						//write = 1'b1;
-						//writedata = 0;
-						//write_request = 1'b0;
 						write_request = 1'b0;
 						next_state = WRITE_ENABLE_FROM_FULL;
 					end
@@ -657,12 +511,8 @@ module xillydemo
 					end
 					if(svr_fe == 1)
 					begin
-						//address = 0;
-						//write = 1'b1;
-						//writedata = 0;
 						write_request = 1'b0;
-						next_state = WRITE_ENABLE_FROM_FE;
-						
+						next_state = WRITE_ENABLE_FROM_FE;					
 					end
 					else
 					begin
@@ -685,9 +535,6 @@ module xillydemo
 					current = 10;
 					if(user_r_read_32_empty == 1'b1)
 					begin
-						//address = 0;
-						//write = 1'b1;
-						//writedata = 1;
 						next_state = WRITE_ENABLE_FROM_EMPTY;
 					end
 					else
@@ -744,10 +591,7 @@ module xillydemo
 					next_state = WAIT;
 				end	
 			endcase
-			
-		//end
-		
-		
+	
    end
 
    assign  user_r_mem_8_empty = 0;

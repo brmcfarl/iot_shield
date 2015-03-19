@@ -13,7 +13,7 @@ wire [1:0] buttons_held;
 wire [1:0] switch_pressed;
 wire [1:0] switch_held;
 reg reset_debs;
-localparam [7:0] WAIT = 1,ENABLE_CORE=2,WRITE_SLAVE_ADDRESS=3,WRITE_START_AND_WRITE=4,WAIT_FOR_TIP_FROM_STEP_2=5,SET_DATA_TO_DEVICE=6,SEND_WRITE_TO_DEVICE=7,WAIT_TRANSFER_DONE=8,SET_LAST_DATA=9,SEND_WRITE_STOP=10;
+localparam [7:0] WAIT = 1,ENABLE_CORE=2,WRITE_SLAVE_ADDRESS=3,WRITE_START_AND_WRITE=4,WAIT_FOR_TIP_FROM_STEP_2=5,SET_DATA_TO_DEVICE=6,SEND_WRITE_TO_DEVICE=7,WAIT_TRANSFER_DONE=8,SET_LAST_DATA=9,SEND_WRITE_STOP=10,WAIT_FOR_STOP=11, WRITE_READ_FROM_DEVICE=12, READ_FROM_DEVICE=13;
 localparam [2:0] PRERlo = 0, PRERhi = 1, CTR = 2, TXR = 3, RXR = 3, CR = 4, SR = 4;
 reg [7:0] current_state, next_state;
 
@@ -26,7 +26,7 @@ debouncer d4(.button(~user_sw[1]), .clk(clk_50), .reset(reset_debs), .pressed(sw
 
 wire [7:0] address_slave_cam_write = 8'h6c;
 wire [7:0] address_slave_cam_read = 8'h6d;
-wire [6:0] number_of_registers = 7'h59; //n regs - 1
+wire [6:0] number_of_registers = 7'h10; //n regs - 1
 reg [7:0] high_address [0:89] ;
 reg [7:0] low_address [0:89] ;
 reg [7:0] values [0:89] ;
@@ -91,9 +91,9 @@ begin
 		write_flag <= 0;
 		write_upper_address_flag <= 0;
 		write_lower_address_flag <= 0;
-		write_values_flag <= 0;
 		register_index <= 0;
 		last_transmission_flag <= 0;
+		needs_read_flag <= 0;
 	end
 	else 
 	begin
@@ -102,8 +102,9 @@ begin
 		begin
 			last_transmission_flag <= 0;
 			register_index <= 0;
+			needs_read_flag <=0;
 		end
-		if(current_state == ENABLE_CORE || current_state == WRITE_SLAVE_ADDRESS || current_state == WRITE_START_AND_WRITE ||current_state ==  SET_DATA_TO_DEVICE ||current_state == SEND_WRITE_TO_DEVICE|| current_state == SET_LAST_DATA ||current_state == SEND_WRITE_STOP )
+		if(current_state == ENABLE_CORE || current_state == WRITE_SLAVE_ADDRESS || current_state == WRITE_START_AND_WRITE ||current_state ==  SET_DATA_TO_DEVICE ||current_state == SEND_WRITE_TO_DEVICE|| current_state == SET_LAST_DATA ||current_state == SEND_WRITE_STOP || current_state == WRITE_READ_FROM_DEVICE || current_state == READ_FROM_DEVICE)
 		begin
 			if(write_flag == 3)
 			begin
@@ -114,7 +115,7 @@ begin
 				write_flag <= write_flag + 1;
 			end
 		end
-		if(current_state == WAIT_FOR_TIP_FROM_STEP_2 || current_state == WAIT_TRANSFER_DONE)
+		if(current_state == WAIT_FOR_TIP_FROM_STEP_2 || current_state == WAIT_TRANSFER_DONE || current_state == WAIT_FOR_STOP)
 		begin
 			if(read_flag == 2)
 			begin
@@ -149,25 +150,25 @@ begin
 					else if(write_lower_address_flag)
 					begin
 						write_lower_address_flag <= 0;
-						write_values_flag <= 1;
-					end
-					else if(write_values_flag)
-					begin
-						write_values_flag <= 0;
-						register_index <= register_index + 1;
-						write_upper_address_flag <= 1;
-						if(register_index == (number_of_registers -1))
-						begin
-							last_transmission_flag <= 1;
-						end
-						
 					end
 				end
 			end
 		end
-		else if(current_state == SET_LAST_DATA)
+		else if (current_state == SEND_WRITE_STOP || current_state == READ_FROM_DEVICE)
 		begin
-			write_values_flag <= 0;
+			needs_read_flag <= 0;
+			if(write_flag == 3)
+			begin
+				register_index <= register_index + 1;
+				if(register_index == (number_of_registers -1))
+				begin
+					last_transmission_flag <= 1;
+				end //if
+			end //if
+		end //else if
+		else if(current_state == WRITE_READ_FROM_DEVICE)
+		begin
+			needs_read_flag <= 1;
 		end
 	end
 	
@@ -175,7 +176,7 @@ end
 
 reg write_upper_address_flag ;
 reg write_lower_address_flag ;
-reg write_values_flag ;
+reg needs_read_flag;
 reg last_transmission_flag;
 
 always @(*)
@@ -247,7 +248,7 @@ begin
 		begin
 			if(write_flag == 3)
 			begin
-				next_state = WAIT_FOR_TIP_FROM_STEP_2;
+				next_state = WAIT_FOR_TIP_FROM_STEP_2;		
 			end
 			else
 			begin
@@ -263,7 +264,14 @@ begin
 				address = SR;
 				if(readdata[1] == 0)
 				begin
-					next_state = SET_DATA_TO_DEVICE;
+					if(needs_read_flag == 0)
+					begin
+						next_state = SET_DATA_TO_DEVICE;		
+					end
+					else if(needs_read_flag == 1)
+					begin
+						next_state = READ_FROM_DEVICE;		
+					end		
 				end
 			end
 			else
@@ -272,6 +280,26 @@ begin
 			end
 			
 					
+		end
+		READ_FROM_DEVICE:
+		begin
+			if(write_flag == 3)
+			begin
+				if(last_transmission_flag)
+				begin
+					next_state = WAIT;
+				end
+				else
+				begin
+					next_state = WAIT_FOR_STOP; 
+				end
+			end
+			else
+			begin
+				write = 1;
+				address = CR;
+				writedata = 8'h28;
+			end 
 		end
 		SET_DATA_TO_DEVICE:
 		begin
@@ -290,10 +318,6 @@ begin
 				else if(write_lower_address_flag)
 				begin
 					writedata = low_address[register_index]; // to bevariable
-				end
-				else if(write_values_flag)
-				begin
-					writedata = values[register_index]; // to bevariable
 				end
 				
 			end 
@@ -324,53 +348,60 @@ begin
 					begin
 						next_state = SET_DATA_TO_DEVICE; //needs flags
 					end
-					else if(write_lower_address_flag)
+					else if(write_lower_address_flag && switch_held[0])
 					begin
-						//write_values_flag = 1;
-						if(last_transmission_flag)
-						begin
-							next_state = SET_LAST_DATA; //needs flags
-						end
-						else
-						begin
-							next_state = SET_DATA_TO_DEVICE; //needs flags
-						end
+						next_state = SET_LAST_DATA; //needs flags
 					end
-					else if(write_values_flag)
+					else if(write_lower_address_flag && switch_held[1])
 					begin
-						//write_values_flag = 0;
-						next_state = SET_DATA_TO_DEVICE; //needs flags
+						next_state = WRITE_READ_FROM_DEVICE; //needs flags
 					end
 				end
 			end
 			else
 			begin
 				address = SR;
+			end		
+		end
+		WRITE_READ_FROM_DEVICE: 
+		begin
+			if(write_flag == 3)
+			begin
+				next_state = WRITE_START_AND_WRITE;
 			end
-		
-
-			
+			else
+			begin
+				write = 1;
+				address = TXR;
+				writedata = address_slave_cam_read;
+			end 
 		end
 		SET_LAST_DATA:
 		begin
 			//write_values_flag = 0;
 			if(write_flag == 3)
 			begin
-				next_state = SEND_WRITE_STOP; //need flags
+				next_state = SEND_WRITE_STOP; 
 			end
 			else
 			begin
 				write = 1;
 				address = TXR;
-				writedata = values[register_index]; // to bevariable				
+				writedata = values[register_index]; 			
 			end 
 		end
 		SEND_WRITE_STOP:
 		begin
 			if(write_flag == 3)
 			begin
-			
-				next_state = WAIT; //needs flags
+				if(last_transmission_flag)
+				begin
+					next_state = WAIT;
+				end
+				else
+				begin
+					next_state = WAIT_FOR_STOP; 
+				end
 			end
 			else
 			begin
@@ -378,6 +409,21 @@ begin
 				address = CR;
 				writedata = 8'h50;
 			end 
+		end
+		WAIT_FOR_STOP:
+		begin
+			if(read_flag == 2)
+			begin
+				address = SR;
+				if(readdata[1] == 0)
+				begin
+					next_state = WRITE_SLAVE_ADDRESS;
+				end
+			end
+			else
+			begin
+				address = SR;
+			end
 		end
 		default: next_state = WAIT;
 		endcase

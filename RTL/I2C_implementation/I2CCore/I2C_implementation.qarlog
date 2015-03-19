@@ -1,0 +1,23 @@
+Quartus II Archive log --	C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/I2C_implementation.qarlog
+
+Archive:	C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/I2C_implementation.qar
+Date:		Wed Mar 18 23:03:29 2015
+Quartus II 32-bit		12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_defines.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_top.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/timescale.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/I2COpenCore.qpf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/I2COpenCore.qsf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/I2COpenCore.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/incremental_db/compiled_partitions/I2COpenCore.db_info
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/output_files/stp1.stp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/debouncer.v
+c:/altera/12.1sp1/quartus/bin/assignment_defaults.qdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

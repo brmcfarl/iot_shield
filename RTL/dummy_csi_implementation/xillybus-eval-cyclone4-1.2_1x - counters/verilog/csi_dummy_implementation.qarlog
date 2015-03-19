@@ -1,0 +1,103 @@
+Quartus II Archive log --	C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/csi_dummy_implementation.qarlog
+
+Archive:	C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/csi_dummy_implementation.qar
+Date:		Wed Mar 18 22:52:07 2015
+Quartus II 32-bit		12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/core/xillybus_core.qxp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_64b_x1_pipen1b.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_64b_x4_pipen1b.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_64b_x8_pipen1b.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_256_pipen1b.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_pipen1b.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pclk_align.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pclk_pll.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_phasefifo.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_100_125.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_100_250.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_125_250.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_15625_125.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_250_100.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy0.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy1_62p5.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy2.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy3_62p5.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy4_62p5.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy5_62p5.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_reconfig_3cgx.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_reconfig_4sgx.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_rs_serdes.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x1_12500.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x1_15625.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x4_12500.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x4_15625.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x1d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x1d_gen1_16p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x4d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x4d_gen1_16p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x8d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2sgx_x1d_10000.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2sgx_x4d_10000.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2sgx_x8d_10000.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x1d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x1d_gen1_16p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x2d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x4d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x1d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x1d_gen1_16p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x1d_gen2_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x4d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x4d_gen1_16p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x4d_gen2_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x8d_gen1_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x8d_gen2_08p.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/altpcierd_reconfig_clk_pll.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexp1x125_ltssm.ocp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexp4x125_ltssm.ocp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexp64_dlink.ocp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexp64_dlink.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexp64_trans.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexp_dcram.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexpx8f_confctrl.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexpx8f_ltssm.ocp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/ip_compiler_for_pci_express-library/pciexpx8f_pexreg.ocp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.bsf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.html
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.ppf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.ppx
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.qip
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.sdc
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.tcl
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_bb.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_core.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/altpcierd_example_app_chaining.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example.sdc
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_pipen1b.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_top.qpf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_top.qsf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_top.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_plus.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_rs_hip.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/altpcietb_bfm_driver_chaining.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/pcie_c4_1x_chaining_testbench.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/runtb.bat
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/runtb.do
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/runtb.sh
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/sim_filelist
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/pcie_core/pcie_c4_1x_serdes.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/incremental_db/compiled_partitions/xillydemo.db_info
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/logic1.stp
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/src/debouncer.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/src/dummy_svr.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/src/xillybus.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/src/xillydemo.sdc
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/src/xillydemo.v
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/xillydemo.qpf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/xillydemo.qsf
+C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/xillybus-eval-cyclone4-1.2_1x - counters/verilog/xillydemo_assignment_defaults.qdf
+	======= Total: 92 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

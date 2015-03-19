@@ -1,5 +1,5 @@
 Analysis & Synthesis report for I2COpenCore
-Wed Mar 18 01:56:08 2015
+Wed Mar 18 23:02:32 2015
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -26,14 +26,12 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Editio
  18. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller
  19. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  20. Port Connectivity Checks: "i2c_master_top:i2c_master"
- 21. Port Connectivity Checks: "debouncer:d4"
- 22. Port Connectivity Checks: "debouncer:d3"
- 23. Port Connectivity Checks: "debouncer:d2"
- 24. Port Connectivity Checks: "debouncer:d1"
- 25. SignalTap II Logic Analyzer Settings
- 26. Elapsed Time Per Partition
- 27. Connections to In-System Debugging Instance "auto_signaltap_0"
- 28. Analysis & Synthesis Messages
+ 21. Port Connectivity Checks: "debouncer:d2"
+ 22. Port Connectivity Checks: "debouncer:d1"
+ 23. SignalTap II Logic Analyzer Settings
+ 24. Elapsed Time Per Partition
+ 25. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -59,15 +57,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 18 01:56:08 2015         ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 18 23:02:32 2015         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; I2COpenCore                                   ;
 ; Top-level Entity Name              ; I2COpenCore                                   ;
 ; Family                             ; Cyclone IV GX                                 ;
-; Total logic elements               ; 1,491                                         ;
-;     Total combinational functions  ; 1,093                                         ;
-;     Dedicated logic registers      ; 886                                           ;
-; Total registers                    ; 886                                           ;
+; Total logic elements               ; 1,502                                         ;
+;     Total combinational functions  ; 1,105                                         ;
+;     Dedicated logic registers      ; 889                                           ;
+; Total registers                    ; 889                                           ;
 ; Total pins                         ; 21                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 655,360                                       ;
@@ -185,67 +183,67 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
-+---------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
-+---------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_top.v       ; yes             ; User Verilog HDL File        ; C:/altera/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_top.v                 ;         ;
-; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_defines.v   ; yes             ; User Verilog HDL File        ; C:/altera/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_defines.v             ;         ;
-; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v ; yes             ; User Verilog HDL File        ; C:/altera/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v           ;         ;
-; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v  ; yes             ; User Verilog HDL File        ; C:/altera/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v            ;         ;
-; ../debouncer.v                                                ; yes             ; User Verilog HDL File        ; C:/altera/debouncer.v                                                          ;         ;
-; I2COpenCore.v                                                 ; yes             ; User Verilog HDL File        ; C:/altera/I2CCore/I2COpenCore.v                                                ;         ;
-; sld_signaltap.vhd                                             ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
-; sld_signaltap_impl.vhd                                        ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
-; sld_ela_control.vhd                                           ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
-; lpm_shiftreg.tdf                                              ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;         ;
-; lpm_constant.inc                                              ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
-; dffeea.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
-; aglobal121.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc               ;         ;
-; sld_mbpmg.vhd                                                 ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;         ;
-; sld_ela_trigger_flow_mgr.vhd                                  ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;         ;
-; sld_buffer_manager.vhd                                        ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;         ;
-; altsyncram.tdf                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
-; stratix_ram_block.inc                                         ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
-; lpm_mux.inc                                                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
-; lpm_decode.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
-; a_rdenreg.inc                                                 ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
-; altrom.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
-; altram.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altram.inc                   ;         ;
-; altdpram.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
-; db/altsyncram_3524.tdf                                        ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/altsyncram_3524.tdf                                       ;         ;
-; db/decode_g0b.tdf                                             ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/decode_g0b.tdf                                            ;         ;
-; db/mux_bsb.tdf                                                ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/mux_bsb.tdf                                               ;         ;
-; altdpram.tdf                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altdpram.tdf                 ;         ;
-; memmodes.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/others/maxplus2/memmodes.inc               ;         ;
-; a_hdffe.inc                                                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/a_hdffe.inc                  ;         ;
-; alt_le_rden_reg.inc                                           ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/alt_le_rden_reg.inc          ;         ;
-; altsyncram.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altsyncram.inc               ;         ;
-; lpm_mux.tdf                                                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
-; muxlut.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
-; bypassff.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
-; altshift.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
-; db/mux_k0d.tdf                                                ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/mux_k0d.tdf                                               ;         ;
-; lpm_decode.tdf                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.tdf               ;         ;
-; declut.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/declut.inc                   ;         ;
-; lpm_compare.inc                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
-; db/decode_73g.tdf                                             ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/decode_73g.tdf                                            ;         ;
-; lpm_counter.tdf                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
-; lpm_add_sub.inc                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
-; cmpconst.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
-; lpm_counter.inc                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
-; alt_counter_stratix.inc                                       ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
-; db/cntr_5ki.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/cntr_5ki.tdf                                              ;         ;
-; db/cmpr_lkc.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/cmpr_lkc.tdf                                              ;         ;
-; db/cntr_afj.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/cntr_afj.tdf                                              ;         ;
-; db/cntr_7ki.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/cntr_7ki.tdf                                              ;         ;
-; db/cntr_s6j.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/cntr_s6j.tdf                                              ;         ;
-; db/cmpr_hkc.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/altera/I2CCore/db/cmpr_hkc.tdf                                              ;         ;
-; sld_rom_sr.vhd                                                ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;         ;
-; sld_hub.vhd                                                   ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_hub.vhd                  ;         ;
-; sld_jtag_hub.vhd                                              ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd             ;         ;
-+---------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                   ;
++---------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                  ; Library ;
++---------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_top.v       ; yes             ; User Verilog HDL File        ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_top.v       ;         ;
+; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_defines.v   ; yes             ; User Verilog HDL File        ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_defines.v   ;         ;
+; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v ; yes             ; User Verilog HDL File        ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v ;         ;
+; ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v  ; yes             ; User Verilog HDL File        ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v  ;         ;
+; ../debouncer.v                                                ; yes             ; User Verilog HDL File        ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/debouncer.v                                                ;         ;
+; I2COpenCore.v                                                 ; yes             ; User Verilog HDL File        ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/I2COpenCore.v                                      ;         ;
+; sld_signaltap.vhd                                             ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                           ;         ;
+; sld_signaltap_impl.vhd                                        ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                      ;         ;
+; sld_ela_control.vhd                                           ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                         ;         ;
+; lpm_shiftreg.tdf                                              ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                            ;         ;
+; lpm_constant.inc                                              ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc                                                            ;         ;
+; dffeea.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc                                                                  ;         ;
+; aglobal121.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc                                                              ;         ;
+; sld_mbpmg.vhd                                                 ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                               ;         ;
+; sld_ela_trigger_flow_mgr.vhd                                  ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                ;         ;
+; sld_buffer_manager.vhd                                        ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                      ;         ;
+; altsyncram.tdf                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                              ;         ;
+; stratix_ram_block.inc                                         ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                       ;         ;
+; lpm_mux.inc                                                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                 ;         ;
+; lpm_decode.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                              ;         ;
+; a_rdenreg.inc                                                 ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                               ;         ;
+; altrom.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altrom.inc                                                                  ;         ;
+; altram.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altram.inc                                                                  ;         ;
+; altdpram.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altdpram.inc                                                                ;         ;
+; db/altsyncram_3524.tdf                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/altsyncram_3524.tdf                             ;         ;
+; db/decode_g0b.tdf                                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/decode_g0b.tdf                                  ;         ;
+; db/mux_bsb.tdf                                                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/mux_bsb.tdf                                     ;         ;
+; altdpram.tdf                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altdpram.tdf                                                                ;         ;
+; memmodes.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/others/maxplus2/memmodes.inc                                                              ;         ;
+; a_hdffe.inc                                                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/a_hdffe.inc                                                                 ;         ;
+; alt_le_rden_reg.inc                                           ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                         ;         ;
+; altsyncram.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altsyncram.inc                                                              ;         ;
+; lpm_mux.tdf                                                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                 ;         ;
+; muxlut.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/muxlut.inc                                                                  ;         ;
+; bypassff.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/bypassff.inc                                                                ;         ;
+; altshift.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altshift.inc                                                                ;         ;
+; db/mux_k0d.tdf                                                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/mux_k0d.tdf                                     ;         ;
+; lpm_decode.tdf                                                ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.tdf                                                              ;         ;
+; declut.inc                                                    ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/declut.inc                                                                  ;         ;
+; lpm_compare.inc                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc                                                             ;         ;
+; db/decode_73g.tdf                                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/decode_73g.tdf                                  ;         ;
+; lpm_counter.tdf                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf                                                             ;         ;
+; lpm_add_sub.inc                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                             ;         ;
+; cmpconst.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc                                                                ;         ;
+; lpm_counter.inc                                               ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc                                                             ;         ;
+; alt_counter_stratix.inc                                       ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                     ;         ;
+; db/cntr_5ki.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/cntr_5ki.tdf                                    ;         ;
+; db/cmpr_lkc.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/cmpr_lkc.tdf                                    ;         ;
+; db/cntr_afj.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/cntr_afj.tdf                                    ;         ;
+; db/cntr_7ki.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/cntr_7ki.tdf                                    ;         ;
+; db/cntr_s6j.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/cntr_s6j.tdf                                    ;         ;
+; db/cmpr_hkc.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/cmpr_hkc.tdf                                    ;         ;
+; sld_rom_sr.vhd                                                ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                              ;         ;
+; sld_hub.vhd                                                   ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_hub.vhd                                                                 ;         ;
+; sld_jtag_hub.vhd                                              ; yes             ; Encrypted Megafunction       ; c:/altera/12.1sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                            ;         ;
++---------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -256,9 +254,9 @@ applicable agreement for further details.
 ; I/O pins                 ; 21               ;
 ; Total memory bits        ; 655360           ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out          ; 614              ;
-; Total fan-out            ; 8928             ;
-; Average fan-out          ; 4.23             ;
+; Maximum fan-out          ; 617              ;
+; Total fan-out            ; 8980             ;
+; Average fan-out          ; 4.22             ;
 +--------------------------+------------------+
 
 
@@ -267,15 +265,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                               ; Library Name ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |I2COpenCore                                                                                            ; 1093 (273)        ; 886 (25)     ; 655360      ; 0            ; 0       ; 0         ; 0         ; 21   ; 0            ; |I2COpenCore                                                                                                                                                                                                                                                                                                                                      ;              ;
+; |I2COpenCore                                                                                            ; 1105 (290)        ; 889 (28)     ; 655360      ; 0            ; 0       ; 0         ; 0         ; 21   ; 0            ; |I2COpenCore                                                                                                                                                                                                                                                                                                                                      ;              ;
 ;    |debouncer:d2|                                                                                       ; 22 (22)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|debouncer:d2                                                                                                                                                                                                                                                                                                                         ;              ;
 ;    |debouncer:d3|                                                                                       ; 9 (9)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|debouncer:d3                                                                                                                                                                                                                                                                                                                         ;              ;
 ;    |debouncer:d4|                                                                                       ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|debouncer:d4                                                                                                                                                                                                                                                                                                                         ;              ;
-;    |i2c_master_top:i2c_master|                                                                          ; 229 (35)          ; 133 (34)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|i2c_master_top:i2c_master                                                                                                                                                                                                                                                                                                            ;              ;
-;       |i2c_master_byte_ctrl:byte_controller|                                                            ; 194 (54)          ; 99 (26)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller                                                                                                                                                                                                                                                                       ;              ;
-;          |i2c_master_bit_ctrl:bit_controller|                                                           ; 140 (140)         ; 73 (73)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller                                                                                                                                                                                                                                    ;              ;
-;    |sld_hub:auto_hub|                                                                                   ; 143 (1)           ; 94 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ;              ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 142 (104)         ; 94 (66)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ;              ;
+;    |i2c_master_top:i2c_master|                                                                          ; 229 (34)          ; 133 (34)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|i2c_master_top:i2c_master                                                                                                                                                                                                                                                                                                            ;              ;
+;       |i2c_master_byte_ctrl:byte_controller|                                                            ; 195 (54)          ; 99 (26)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller                                                                                                                                                                                                                                                                       ;              ;
+;          |i2c_master_bit_ctrl:bit_controller|                                                           ; 141 (141)         ; 73 (73)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller                                                                                                                                                                                                                                    ;              ;
+;    |sld_hub:auto_hub|                                                                                   ; 138 (1)           ; 94 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 137 (99)          ; 94 (66)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ;              ;
 ;          |sld_rom_sr:hub_info_reg|                                                                      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ;              ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ;              ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                     ; 415 (1)           ; 606 (40)     ; 655360      ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |I2COpenCore|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ;              ;
@@ -347,22 +345,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |I2COpenCore|current_state                                                                                                                                                                                                                                                                                                                                          ;
-+----------------------------------------+-------------------------------+-----------------------------+----------------------------------+------------------------------------+----------------------------------+----------------------------------------+-------------------------------------+-----------------------------------+---------------------------+--------------------+
-; Name                                   ; current_state.SEND_WRITE_STOP ; current_state.SET_LAST_DATA ; current_state.WAIT_TRANSFER_DONE ; current_state.SEND_WRITE_TO_DEVICE ; current_state.SET_DATA_TO_DEVICE ; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; current_state.WRITE_START_AND_WRITE ; current_state.WRITE_SLAVE_ADDRESS ; current_state.ENABLE_CORE ; current_state.WAIT ;
-+----------------------------------------+-------------------------------+-----------------------------+----------------------------------+------------------------------------+----------------------------------+----------------------------------------+-------------------------------------+-----------------------------------+---------------------------+--------------------+
-; current_state.WAIT                     ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 0                  ;
-; current_state.ENABLE_CORE              ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 1                         ; 1                  ;
-; current_state.WRITE_SLAVE_ADDRESS      ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 1                                 ; 0                         ; 1                  ;
-; current_state.WRITE_START_AND_WRITE    ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 1                                   ; 0                                 ; 0                         ; 1                  ;
-; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 1                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
-; current_state.SET_DATA_TO_DEVICE       ; 0                             ; 0                           ; 0                                ; 0                                  ; 1                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
-; current_state.SEND_WRITE_TO_DEVICE     ; 0                             ; 0                           ; 0                                ; 1                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
-; current_state.WAIT_TRANSFER_DONE       ; 0                             ; 0                           ; 1                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
-; current_state.SET_LAST_DATA            ; 0                             ; 1                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
-; current_state.SEND_WRITE_STOP          ; 1                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
-+----------------------------------------+-------------------------------+-----------------------------+----------------------------------+------------------------------------+----------------------------------+----------------------------------------+-------------------------------------+-----------------------------------+---------------------------+--------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |I2COpenCore|current_state                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++----------------------------------------+--------------------------------+--------------------------------------+-----------------------------+-------------------------------+-----------------------------+----------------------------------+------------------------------------+----------------------------------+----------------------------------------+-------------------------------------+-----------------------------------+---------------------------+--------------------+
+; Name                                   ; current_state.READ_FROM_DEVICE ; current_state.WRITE_READ_FROM_DEVICE ; current_state.WAIT_FOR_STOP ; current_state.SEND_WRITE_STOP ; current_state.SET_LAST_DATA ; current_state.WAIT_TRANSFER_DONE ; current_state.SEND_WRITE_TO_DEVICE ; current_state.SET_DATA_TO_DEVICE ; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; current_state.WRITE_START_AND_WRITE ; current_state.WRITE_SLAVE_ADDRESS ; current_state.ENABLE_CORE ; current_state.WAIT ;
++----------------------------------------+--------------------------------+--------------------------------------+-----------------------------+-------------------------------+-----------------------------+----------------------------------+------------------------------------+----------------------------------+----------------------------------------+-------------------------------------+-----------------------------------+---------------------------+--------------------+
+; current_state.WAIT                     ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 0                  ;
+; current_state.ENABLE_CORE              ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 1                         ; 1                  ;
+; current_state.WRITE_SLAVE_ADDRESS      ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 1                                 ; 0                         ; 1                  ;
+; current_state.WRITE_START_AND_WRITE    ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 1                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 1                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.SET_DATA_TO_DEVICE       ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 1                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.SEND_WRITE_TO_DEVICE     ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 1                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.WAIT_TRANSFER_DONE       ; 0                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 1                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.SET_LAST_DATA            ; 0                              ; 0                                    ; 0                           ; 0                             ; 1                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.SEND_WRITE_STOP          ; 0                              ; 0                                    ; 0                           ; 1                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.WAIT_FOR_STOP            ; 0                              ; 0                                    ; 1                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.WRITE_READ_FROM_DEVICE   ; 0                              ; 1                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
+; current_state.READ_FROM_DEVICE         ; 1                              ; 0                                    ; 0                           ; 0                             ; 0                           ; 0                                ; 0                                  ; 0                                ; 0                                      ; 0                                   ; 0                                 ; 0                         ; 1                  ;
++----------------------------------------+--------------------------------+--------------------------------------+-----------------------------+-------------------------------+-----------------------------+----------------------------------+------------------------------------+----------------------------------+----------------------------------------+-------------------------------------+-----------------------------------+---------------------------+--------------------+
 
 
 Encoding Type:  One-Hot
@@ -465,12 +466,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 886   ;
-; Number of registers using Synchronous Clear  ; 46    ;
-; Number of registers using Synchronous Load   ; 76    ;
+; Total registers                              ; 889   ;
+; Number of registers using Synchronous Clear  ; 43    ;
+; Number of registers using Synchronous Load   ; 78    ;
 ; Number of registers using Asynchronous Clear ; 423   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 451   ;
+; Number of registers using Clock Enable       ; 450   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -521,30 +522,31 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[6]     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cnt[2]         ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|filter_cnt[12] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |I2COpenCore|write_flag[1]                                                                                                    ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[4]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cnt[1]         ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|filter_cnt[13] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |I2COpenCore|write_flag[0]                                                                                                    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |I2COpenCore|read_flag[1]                                                                                                     ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|wb_dat_o[4]                                                                            ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|wb_dat_o[5]                                                                            ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|cr[1]                                                                                  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|dcnt[2]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|sr[0]                                             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|txr[1]                                                                                 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|ctr[0]                                                                                 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|prer[10]                                                                               ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|prer[4]                                                                                ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|wb_dat_o[2]                                                                            ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|wb_dat_o[7]                                                                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|cr[2]                                                                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|dcnt[1]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|sr[3]                                             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|txr[6]                                                                                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|ctr[7]                                                                                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|prer[15]                                                                               ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|prer[7]                                                                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[13]    ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|cr[7]                                                                                  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |I2COpenCore|register_index[0]                                                                                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|cr[4]                                                                                  ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |I2COpenCore|register_index[4]                                                                                                ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|core_cmd[2]                                       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSCL[2]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|prer[6]                                                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSDA[1]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |I2COpenCore|i2c_master_top:i2c_master|prer[5]                                                                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |I2COpenCore|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|core_cmd                                          ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |I2COpenCore|writedata                                                                                                        ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |I2COpenCore|writedata[5]                                                                                                     ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; No         ; |I2COpenCore|current_state                                                                                                    ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |I2COpenCore|writedata[3]                                                                                                     ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; No         ; |I2COpenCore|current_state                                                                                                    ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; No         ; |I2COpenCore|current_state                                                                                                    ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 8 LEs                ; 14 LEs                 ; No         ; |I2COpenCore|current_state                                                                                                    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                               ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][5]                                      ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |I2COpenCore|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                  ;
@@ -674,24 +676,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "debouncer:d4"                                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; held ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "debouncer:d3"                                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; held ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "debouncer:d2"                                                                          ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -730,53 +714,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                             ;
-+----------------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------+---------+
-; Name                                   ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                      ; Details ;
-+----------------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------+---------+
-; clk_50                                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; clk_50                                 ; N/A     ;
-; current_state.ENABLE_CORE              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.ENABLE_CORE              ; N/A     ;
-; current_state.ENABLE_CORE              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.ENABLE_CORE              ; N/A     ;
-; current_state.SEND_WRITE_STOP          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_STOP          ; N/A     ;
-; current_state.SEND_WRITE_STOP          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_STOP          ; N/A     ;
-; current_state.SEND_WRITE_TO_DEVICE     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_TO_DEVICE     ; N/A     ;
-; current_state.SEND_WRITE_TO_DEVICE     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_TO_DEVICE     ; N/A     ;
-; current_state.SET_DATA_TO_DEVICE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_DATA_TO_DEVICE       ; N/A     ;
-; current_state.SET_DATA_TO_DEVICE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_DATA_TO_DEVICE       ; N/A     ;
-; current_state.SET_LAST_DATA            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_LAST_DATA            ; N/A     ;
-; current_state.SET_LAST_DATA            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_LAST_DATA            ; N/A     ;
-; current_state.WAIT                     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT~_wirecell           ; N/A     ;
-; current_state.WAIT                     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT~_wirecell           ; N/A     ;
-; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; N/A     ;
-; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; N/A     ;
-; current_state.WAIT_TRANSFER_DONE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_TRANSFER_DONE       ; N/A     ;
-; current_state.WAIT_TRANSFER_DONE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_TRANSFER_DONE       ; N/A     ;
-; current_state.WRITE_SLAVE_ADDRESS      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_SLAVE_ADDRESS      ; N/A     ;
-; current_state.WRITE_SLAVE_ADDRESS      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_SLAVE_ADDRESS      ; N/A     ;
-; current_state.WRITE_START_AND_WRITE    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_START_AND_WRITE    ; N/A     ;
-; current_state.WRITE_START_AND_WRITE    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_START_AND_WRITE    ; N/A     ;
-; i2c_scl                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_scl                                ; N/A     ;
-; i2c_scl                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_scl                                ; N/A     ;
-; i2c_sda                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_sda                                ; N/A     ;
-; i2c_sda                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_sda                                ; N/A     ;
-; last_transmission_flag                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; last_transmission_flag                 ; N/A     ;
-; last_transmission_flag                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; last_transmission_flag                 ; N/A     ;
-; register_index[0]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[0]                      ; N/A     ;
-; register_index[0]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[0]                      ; N/A     ;
-; register_index[1]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[1]                      ; N/A     ;
-; register_index[1]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[1]                      ; N/A     ;
-; user_sw[1]                             ; pre-synthesis ; connected ; Top            ; post-synthesis    ; user_sw[1]                             ; N/A     ;
-; user_sw[1]                             ; pre-synthesis ; connected ; Top            ; post-synthesis    ; user_sw[1]                             ; N/A     ;
-; write                                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write~0                                ; N/A     ;
-; write                                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write~0                                ; N/A     ;
-; write_lower_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_lower_address_flag               ; N/A     ;
-; write_lower_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_lower_address_flag               ; N/A     ;
-; write_upper_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_upper_address_flag               ; N/A     ;
-; write_upper_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_upper_address_flag               ; N/A     ;
-; write_values_flag                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_values_flag                      ; N/A     ;
-; write_values_flag                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_values_flag                      ; N/A     ;
-+----------------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                                                                    ;
++----------------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Name                                   ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                      ; Details                                                                                                                                                        ;
++----------------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk_50                                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; clk_50                                 ; N/A                                                                                                                                                            ;
+; current_state.ENABLE_CORE              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.ENABLE_CORE              ; N/A                                                                                                                                                            ;
+; current_state.ENABLE_CORE              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.ENABLE_CORE              ; N/A                                                                                                                                                            ;
+; current_state.SEND_WRITE_STOP          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_STOP          ; N/A                                                                                                                                                            ;
+; current_state.SEND_WRITE_STOP          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_STOP          ; N/A                                                                                                                                                            ;
+; current_state.SEND_WRITE_TO_DEVICE     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_TO_DEVICE     ; N/A                                                                                                                                                            ;
+; current_state.SEND_WRITE_TO_DEVICE     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SEND_WRITE_TO_DEVICE     ; N/A                                                                                                                                                            ;
+; current_state.SET_DATA_TO_DEVICE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_DATA_TO_DEVICE       ; N/A                                                                                                                                                            ;
+; current_state.SET_DATA_TO_DEVICE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_DATA_TO_DEVICE       ; N/A                                                                                                                                                            ;
+; current_state.SET_LAST_DATA            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_LAST_DATA            ; N/A                                                                                                                                                            ;
+; current_state.SET_LAST_DATA            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.SET_LAST_DATA            ; N/A                                                                                                                                                            ;
+; current_state.WAIT                     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT~_wirecell           ; N/A                                                                                                                                                            ;
+; current_state.WAIT                     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT~_wirecell           ; N/A                                                                                                                                                            ;
+; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; N/A                                                                                                                                                            ;
+; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_FOR_TIP_FROM_STEP_2 ; N/A                                                                                                                                                            ;
+; current_state.WAIT_TRANSFER_DONE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_TRANSFER_DONE       ; N/A                                                                                                                                                            ;
+; current_state.WAIT_TRANSFER_DONE       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WAIT_TRANSFER_DONE       ; N/A                                                                                                                                                            ;
+; current_state.WRITE_SLAVE_ADDRESS      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_SLAVE_ADDRESS      ; N/A                                                                                                                                                            ;
+; current_state.WRITE_SLAVE_ADDRESS      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_SLAVE_ADDRESS      ; N/A                                                                                                                                                            ;
+; current_state.WRITE_START_AND_WRITE    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_START_AND_WRITE    ; N/A                                                                                                                                                            ;
+; current_state.WRITE_START_AND_WRITE    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; current_state.WRITE_START_AND_WRITE    ; N/A                                                                                                                                                            ;
+; i2c_scl                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_scl                                ; N/A                                                                                                                                                            ;
+; i2c_scl                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_scl                                ; N/A                                                                                                                                                            ;
+; i2c_sda                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_sda                                ; N/A                                                                                                                                                            ;
+; i2c_sda                                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; i2c_sda                                ; N/A                                                                                                                                                            ;
+; last_transmission_flag                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; last_transmission_flag                 ; N/A                                                                                                                                                            ;
+; last_transmission_flag                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; last_transmission_flag                 ; N/A                                                                                                                                                            ;
+; register_index[0]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[0]                      ; N/A                                                                                                                                                            ;
+; register_index[0]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[0]                      ; N/A                                                                                                                                                            ;
+; register_index[1]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[1]                      ; N/A                                                                                                                                                            ;
+; register_index[1]                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; register_index[1]                      ; N/A                                                                                                                                                            ;
+; user_sw[1]                             ; pre-synthesis ; connected ; Top            ; post-synthesis    ; user_sw[1]                             ; N/A                                                                                                                                                            ;
+; user_sw[1]                             ; pre-synthesis ; connected ; Top            ; post-synthesis    ; user_sw[1]                             ; N/A                                                                                                                                                            ;
+; write                                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write~0                                ; N/A                                                                                                                                                            ;
+; write                                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write~0                                ; N/A                                                                                                                                                            ;
+; write_lower_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_lower_address_flag               ; N/A                                                                                                                                                            ;
+; write_lower_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_lower_address_flag               ; N/A                                                                                                                                                            ;
+; write_upper_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_upper_address_flag               ; N/A                                                                                                                                                            ;
+; write_upper_address_flag               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; write_upper_address_flag               ; N/A                                                                                                                                                            ;
+; write_values_flag                      ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND                                    ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; write_values_flag                      ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND                                    ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
++----------------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -785,31 +769,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 18 01:55:51 2015
+    Info: Processing started: Wed Mar 18 23:02:12 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off I2COpenCore -c I2COpenCore
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/i2c/i2c_clk_divider.v
-    Info (12023): Found entity 1: i2c_clk_divider
-Info (12021): Found 0 design units, including 0 entities, in source file /altera/i2c open core/i2c/trunk/rtl/verilog/timescale.v
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/i2c open core/i2c/trunk/rtl/verilog/i2c_master_top.v
+Warning (12019): Can't analyze file -- file ../I2C/i2c_clk_divider.v is missing
+Info (12021): Found 0 design units, including 0 entities, in source file /users/chicho/documents/github/iot_shield/rtl/i2c_implementation/i2c open core/i2c/trunk/rtl/verilog/timescale.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/chicho/documents/github/iot_shield/rtl/i2c_implementation/i2c open core/i2c/trunk/rtl/verilog/i2c_master_top.v
     Info (12023): Found entity 1: i2c_master_top
-Info (12021): Found 0 design units, including 0 entities, in source file /altera/i2c open core/i2c/trunk/rtl/verilog/i2c_master_defines.v
+Info (12021): Found 0 design units, including 0 entities, in source file /users/chicho/documents/github/iot_shield/rtl/i2c_implementation/i2c open core/i2c/trunk/rtl/verilog/i2c_master_defines.v
 Warning (10335): Unrecognized synthesis attribute "enum_state" at ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v(203)
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/i2c open core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/chicho/documents/github/iot_shield/rtl/i2c_implementation/i2c open core/i2c/trunk/rtl/verilog/i2c_master_byte_ctrl.v
     Info (12023): Found entity 1: i2c_master_byte_ctrl
 Warning (10335): Unrecognized synthesis attribute "enum_state" at ../I2C Open Core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v(185)
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/i2c open core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/chicho/documents/github/iot_shield/rtl/i2c_implementation/i2c open core/i2c/trunk/rtl/verilog/i2c_master_bit_ctrl.v
     Info (12023): Found entity 1: i2c_master_bit_ctrl
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/debouncer.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/chicho/documents/github/iot_shield/rtl/i2c_implementation/debouncer.v
     Info (12023): Found entity 1: debouncer
 Info (12021): Found 1 design units, including 1 entities, in source file i2copencore.v
     Info (12023): Found entity 1: I2COpenCore
 Info (12127): Elaborating entity "I2COpenCore" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at I2COpenCore.v(28): object "address_slave_cam_read" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at I2COpenCore.v(114): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at I2COpenCore.v(125): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at I2COpenCore.v(157): truncated value with size 32 to match size of target (7)
-Warning (10240): Verilog HDL Always Construct warning at I2COpenCore.v(183): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct
+Warning (10230): Verilog HDL assignment warning at I2COpenCore.v(115): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at I2COpenCore.v(126): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at I2COpenCore.v(162): truncated value with size 32 to match size of target (7)
+Warning (10240): Verilog HDL Always Construct warning at I2COpenCore.v(184): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct
 Warning (10030): Net "high_address.data_a" at I2COpenCore.v(30) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "high_address.waddr_a" at I2COpenCore.v(30) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "low_address.data_a" at I2COpenCore.v(31) has no driver or initial value, using a default initial value '0'
@@ -819,7 +801,7 @@ Warning (10030): Net "values.waddr_a" at I2COpenCore.v(32) has no driver or init
 Warning (10030): Net "high_address.we_a" at I2COpenCore.v(30) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "low_address.we_a" at I2COpenCore.v(31) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "values.we_a" at I2COpenCore.v(32) has no driver or initial value, using a default initial value '0'
-Info (10041): Inferred latch for "enable" at I2COpenCore.v(201)
+Info (10041): Inferred latch for "enable" at I2COpenCore.v(202)
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:d1"
 Warning (10230): Verilog HDL assignment warning at debouncer.v(13): truncated value with size 32 to match size of target (20)
 Warning (10230): Verilog HDL assignment warning at debouncer.v(16): truncated value with size 32 to match size of target (20)
@@ -857,9 +839,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_hkc.tdf
     Info (12023): Found entity 1: cmpr_hkc
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
-Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (90) in the Memory Initialization File "C:/altera/I2CCore/db/I2COpenCore.ram2_I2COpenCore_704731bf.hdl.mif" -- setting initial value for remaining addresses to 0
-Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (90) in the Memory Initialization File "C:/altera/I2CCore/db/I2COpenCore.ram1_I2COpenCore_704731bf.hdl.mif" -- setting initial value for remaining addresses to 0
-Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (90) in the Memory Initialization File "C:/altera/I2CCore/db/I2COpenCore.ram0_I2COpenCore_704731bf.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (90) in the Memory Initialization File "C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/I2COpenCore.ram1_I2COpenCore_704731bf.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (90) in the Memory Initialization File "C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/I2COpenCore.ram0_I2COpenCore_704731bf.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (90) in the Memory Initialization File "C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/I2C_implementation/I2CCore/db/I2COpenCore.ram2_I2COpenCore_704731bf.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
@@ -869,7 +851,7 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
-Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 41 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 39 of its 41 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 7 input pin(s) that do not drive logic
@@ -880,16 +862,16 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "user_sw[5]"
     Warning (15610): No output dependent on input pin "user_sw[6]"
     Warning (15610): No output dependent on input pin "user_sw[7]"
-Info (21057): Implemented 1630 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1642 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 9 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1524 logic cells
+    Info (21061): Implemented 1536 logic cells
     Info (21064): Implemented 80 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 419 megabytes
-    Info: Processing ended: Wed Mar 18 01:56:08 2015
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 423 megabytes
+    Info: Processing ended: Wed Mar 18 23:02:32 2015
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:18
 
 

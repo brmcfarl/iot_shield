@@ -7006,7 +7006,7 @@ reset => button_debounced_d.ENA
 
 |xillydemo|dummy_svr:CSI
 svr_pixel[0] <= color.DB_MAX_OUTPUT_PORT_TYPE
-svr_pixel[1] <= <VCC>
+svr_pixel[1] <= color.DB_MAX_OUTPUT_PORT_TYPE
 svr_pixel[2] <= color.DB_MAX_OUTPUT_PORT_TYPE
 svr_pixel[3] <= color.DB_MAX_OUTPUT_PORT_TYPE
 svr_pixel[4] <= color.DB_MAX_OUTPUT_PORT_TYPE
