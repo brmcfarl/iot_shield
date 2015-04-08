@@ -1,0 +1,164 @@
+Archive Project report for xillydemo
+Tue Mar 24 00:40:27 2015
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue Mar 24 00:40:27 2015 ;
+; Revision Name          ; xillydemo                             ;
+; Top-level Entity Name  ; xillydemo                             ;
+; Family                 ; Cyclone IV GX                         ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/csi_dummy_implementation.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'xillydemo.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/altera/12.1sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 32-bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 284 megabytes
+    Info: Processing ended: Tue Mar 24 00:40:27 2015
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++--------------------------------------------------------------------------------------+
+; Files Archived                                                                       ;
++--------------------------------------------------------------------------------------+
+; File Name                                                                            ;
++--------------------------------------------------------------------------------------+
+; core/xillybus_core.qxp                                                               ;
+; incremental_db/compiled_partitions/xillydemo.db_info                                 ;
+; logic1.stp                                                                           ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_64b_x1_pipen1b.v               ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_64b_x4_pipen1b.v               ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_64b_x8_pipen1b.v               ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_256_pipen1b.v              ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_hip_pipen1b.v                  ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pclk_align.v                   ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pclk_pll.v                     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_phasefifo.v                    ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_100_125.v                  ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_100_250.v                  ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_125_250.v                  ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_250_100.v                  ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_15625_125.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy0.v                     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy1_62p5.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy2.v                     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy3_62p5.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy4_62p5.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_pll_phy5_62p5.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_reconfig_3cgx.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_reconfig_4sgx.v                ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_rs_serdes.v                    ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x1_12500.v         ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x1_15625.v         ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x4_12500.v         ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_1sgx_x4_15625.v         ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x1d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x1d_gen1_16p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x4d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x4d_gen1_16p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2agx_x8d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2sgx_x1d_10000.v        ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2sgx_x4d_10000.v        ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_2sgx_x8d_10000.v        ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x1d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x1d_gen1_16p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x2d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_3cgx_x4d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x1d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x1d_gen1_16p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x1d_gen2_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x4d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x4d_gen1_16p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x4d_gen2_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x8d_gen1_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcie_serdes_4sgx_x8d_gen2_08p.v     ;
+; pcie_core/ip_compiler_for_pci_express-library/altpcierd_reconfig_clk_pll.v           ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexp1x125_ltssm.ocp                  ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexp4x125_ltssm.ocp                  ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexp64_dlink.ocp                     ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexp64_dlink.v                       ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexp64_trans.v                       ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexp_dcram.v                         ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexpx8f_confctrl.v                   ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexpx8f_ltssm.ocp                    ;
+; pcie_core/ip_compiler_for_pci_express-library/pciexpx8f_pexreg.ocp                   ;
+; pcie_core/pcie_c4_1x.bsf                                                             ;
+; pcie_core/pcie_c4_1x.html                                                            ;
+; pcie_core/pcie_c4_1x.ppf                                                             ;
+; pcie_core/pcie_c4_1x.ppx                                                             ;
+; pcie_core/pcie_c4_1x.qip                                                             ;
+; pcie_core/pcie_c4_1x.sdc                                                             ;
+; pcie_core/pcie_c4_1x.tcl                                                             ;
+; pcie_core/pcie_c4_1x.v                                                               ;
+; pcie_core/pcie_c4_1x_bb.v                                                            ;
+; pcie_core/pcie_c4_1x_core.v                                                          ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/altpcierd_example_app_chaining.v          ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example.sdc                    ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_pipen1b.v     ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_top.qpf       ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_top.qsf       ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_example_chaining_top.v         ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_plus.v                         ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/pcie_c4_1x_rs_hip.v                       ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/altpcietb_bfm_driver_chaining.v ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/pcie_c4_1x_chaining_testbench.v ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/runtb.bat                       ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/runtb.do                        ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/runtb.sh                        ;
+; pcie_core/pcie_c4_1x_examples/chaining_dma/testbench/sim_filelist                    ;
+; pcie_core/pcie_c4_1x_serdes.v                                                        ;
+; src/debouncer.v                                                                      ;
+; src/dummy_svr.v                                                                      ;
+; src/xillybus.v                                                                       ;
+; src/xillydemo.sdc                                                                    ;
+; src/xillydemo.v                                                                      ;
+; xillydemo.qpf                                                                        ;
+; xillydemo.qsf                                                                        ;
+; xillydemo_assignment_defaults.qdf                                                    ;
++--------------------------------------------------------------------------------------+
+
+

@@ -1,0 +1,293 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.066
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'n/a'
+Slack : 11.777
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50'
+Slack : 12.500
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 42.110
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clkpll|auto_generated|pll1|clk[0]'
+Slack : -0.356
+TNS   : -0.584
+
+Type  : Slow 1200mV 85C Model Hold 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.266
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'n/a'
+Slack : 4.919
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 2.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.785
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 48.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 1.010
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.011
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 1.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'xillybus_ins|pcie|serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|transmit_pcs0|hiptxclkout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'xillybus_ins|pcie|serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|transmit_pma0|clockout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.583
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 3.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|pclkch0'
+Slack : 3.977
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pcie_refclk'
+Slack : 4.826
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.792
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 1.002
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'n/a'
+Slack : 12.437
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50'
+Slack : 13.189
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 42.734
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clkpll|auto_generated|pll1|clk[0]'
+Slack : -0.319
+TNS   : -0.522
+
+Type  : Slow 1200mV 0C Model Hold 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50'
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'n/a'
+Slack : 4.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 2.877
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 4.254
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 48.301
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.912
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 0.912
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.944
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|transmit_pcs0|hiptxclkout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|transmit_pma0|clockout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.531
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 3.634
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|pclkch0'
+Slack : 3.971
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pcie_refclk'
+Slack : 4.824
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.705
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 2.899
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.422
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'n/a'
+Slack : 15.475
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50'
+Slack : 16.297
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 46.382
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkpll|auto_generated|pll1|clk[0]'
+Slack : -0.196
+TNS   : -0.329
+
+Type  : Fast 1200mV 0C Model Hold 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.020
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'n/a'
+Slack : 2.502
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 4.992
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 5.639
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 49.383
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.492
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 0.495
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.496
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|transmit_pcs0|hiptxclkout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|serdes|pcie_c4_1x_serdes_alt_c3gxb_7cf8_component|transmit_pma0|clockout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.679
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkpll|auto_generated|pll1|clk[0]'
+Slack : 3.744
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'xillybus_ins|pcie|wrapper|altpcie_hip_pipen1b_inst|cyclone_iii.cycloneiv_hssi_pcie_hip|pclkch0'
+Slack : 3.994
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pcie_refclk'
+Slack : 4.570
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.414
+TNS   : 0.000
+
+------------------------------------------------------------
