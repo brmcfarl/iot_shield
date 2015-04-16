@@ -101,8 +101,8 @@ int hiRegs[] = {
 0x48, //86
 0x40, //87
 0x40, //88
-0x01, //89
-0x30 //90
+0x50,//89
+0x01 //90
 };
 int lowRegs[] = {
 0x00, //1
@@ -193,14 +193,14 @@ int lowRegs[] = {
 0x37, //86
 0x50, //87
 0x51, //88
-0x00, //89
-0x35 //90
+0x3d, //89
+0x00 //90
 };
 int valueRegs[] = {
 0x00, //1
 0x01, //2
 0x1a, //3
-0x21, //4
+0x41, //4
 0x7d, //5
 0x11, //6
 0xf5, //7
@@ -285,8 +285,8 @@ int valueRegs[] = {
 0x28, //86
 0x6e, //87
 0x8f, //88
-0x01, //89
-0x41 //90
+0x80, //89
+0x00 //90
 };
 
 #include <Wire.h>
@@ -299,15 +299,16 @@ void setup()
 int correctCounter = 0;
 void loop()
 {
-
+  
   for(; j < (sizeof(hiRegs) / sizeof(int)); j++)
   {
-    Wire.beginTransmission(address);
+    //Uncomment to program the i2c registers
+   /* Wire.beginTransmission(address);
     //Wire.requestFrom(address, 1);  
     Wire.write(hiRegs[j]);
     Wire.write(lowRegs[j]);
     Wire.write(valueRegs[j]);
-    Wire.endTransmission();
+    Wire.endTransmission();*/
     //delay(1);
     Wire.beginTransmission(address);
     Wire.write(hiRegs[j]);  // set read register
@@ -324,7 +325,7 @@ void loop()
       }
       else
       {
-        Serial.print("Incorrect at j= ");
+        Serial.print("Incrrect at j= ");
         Serial.println(j + 1);
         Serial.print("Correct value: ");
         Serial.print(valueRegs[j],HEX);
@@ -337,7 +338,8 @@ void loop()
     }
     delay(1);
   }
-  delay(1000);
-}
+
+    delay(1000);
+  }
 
 
