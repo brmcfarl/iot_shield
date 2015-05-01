@@ -27,6 +27,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //                              COPYRIGHT VLSI PLUS, LTD. 2014                                    //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+// 9-April-2015 - two manual changes, plus version step-up (search for 9-April-2015)
 module svr_lt2
 (
 svr_pixel,
@@ -119,7 +120,8 @@ input lpd2_n;
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+// changed the version below (was 32'h01146101)
+`define SVRJNvGI 			   32'h01154091
 `define SVRHElWy 
 `timescale 1ns/1ps
 
@@ -885,7 +887,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRWXaIp
 (
@@ -1762,7 +1764,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRIUHgT
 (
@@ -2009,7 +2011,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRoGpos
 (
@@ -4223,7 +4225,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRiVOzA
 (
@@ -5445,7 +5447,7 @@ if
 (
 SVRnJxgP
 ==
-2'b00
+2'b01    // April-9-2015 manual change
 )
 SVRKPnIo
 =
@@ -6936,7 +6938,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRuPrNG
 (
@@ -7268,7 +7270,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRDWPuG
 (
@@ -10172,7 +10174,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRlWTue
 (
@@ -13607,7 +13609,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRkYKaD
 (
@@ -16385,7 +16387,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRZuLLH
 (
@@ -16505,7 +16507,7 @@ SVRJROZz
 )
 SVRntUoD
 <=
-28'd1
+28'd11 // 9-April-2015 change (was 28'd1)
 ;
 `ifdef SVRxoxPL 
 else
@@ -16908,7 +16910,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 `define SVRPyLMf            6'h10
 `define SVRuMsTc         3'b010
@@ -21292,7 +21294,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRfZzHt
 (
@@ -23905,7 +23907,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRURDuX
 (
@@ -25258,7 +25260,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRFwWBn
 (
@@ -27068,7 +27070,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRnssvS
 (
@@ -27753,7 +27755,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 `define SVRiwKxv            6'b10_1010
 `define SVRelSLK           6'b10_1011
@@ -32518,7 +32520,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRBAPNY
 (
@@ -33021,7 +33023,7 @@ endmodule
 `define SVRDGIDb          8'hE0
 `define SVRoqROa          8'hE4
 `define SVRtBRmr          8'hE8
-`define SVRJNvGI 			   32'h01146101
+//`define SVRJNvGI 			   32'h01146101
 `define SVRHElWy 
 module SVRsbAVU
 (

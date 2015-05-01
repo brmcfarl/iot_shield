@@ -26,7 +26,7 @@ debouncer d4(.button(~user_sw[1]), .clk(clk_50), .reset(reset_debs), .pressed(sw
 
 wire [7:0] address_slave_cam_write = 8'h6c;
 wire [7:0] address_slave_cam_read = 8'h6d;
-wire [6:0] number_of_registers = 7'h10; //n regs - 1
+wire [6:0] number_of_registers = 7'h58; //n regs - 1
 reg [7:0] high_address [0:89] ;
 reg [7:0] low_address [0:89] ;
 reg [7:0] values [0:89] ;
@@ -520,8 +520,8 @@ begin
 	high_address[85] = 8'h48; 
 	high_address[86] = 8'h40; 
 	high_address[87] = 8'h40; 
-	high_address[88] = 8'h01; 
-	high_address[89] = 8'h30; 
+	high_address[88] = 8'h50; 
+	high_address[89] = 8'h01; 
 
 	low_address[0] = 8'h00; 
 	low_address[1] = 8'h03; 
@@ -611,13 +611,13 @@ begin
 	low_address[85] = 8'h37; 
 	low_address[86] = 8'h50; 
 	low_address[87] = 8'h51; 
-	low_address[88] = 8'h00; 
-	low_address[89] = 8'h35; 
+	low_address[88] = 8'h3d; 
+	low_address[89] = 8'h00; 
 
 	values[0] = 8'h00; 
 	values[1] = 8'h01; 
 	values[2] = 8'h1a; 
-	values[3] = 8'h21; 
+	values[3] = 8'h41; 
 	values[4] = 8'h7d; 
 	values[5] = 8'h11; 
 	values[6] = 8'hf5; 
@@ -699,11 +699,13 @@ begin
 	values[82] = 8'h02; 
 	values[83] = 8'h04; 
 	values[84] = 8'h09; 
-	values[85] = 8'h28; 
+	values[85] = 8'h32; 
 	values[86] = 8'h6e; 
 	values[87] = 8'h8f; 
-	values[88] = 8'h01; 
-	values[89] = 8'h41; 
+	values[88] = 8'h80; 
+	values[89] = 8'h01; 
+	
+	//PCLK is internal MIPI pixel clock, it is related to SCLK and MIPI divider. At current 2lane setting, 4837 = 2000/(mipi_speed/5).  If MIPI clock is 125MHz (mipi_speed/lane is 250Mbps), then 4837 = 0x28. If mipi_speed = 200Mbps, then 4837 = 0x32
 
 
 end

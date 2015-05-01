@@ -1,24 +1,42 @@
 
+State Machine - |xillydemo|current_state_i2c
+Name current_state_i2c.WRITE_ENABLE_FROM_FE current_state_i2c.READ_FROM_DEVICE_I2C current_state_i2c.WRITE_READ_FROM_DEVICE_I2C current_state_i2c.WAIT_FOR_STOP_I2C current_state_i2c.SEND_WRITE_STOP_I2C current_state_i2c.SET_LAST_DATA_I2C current_state_i2c.WAIT_TRANSFER_DONE_I2C current_state_i2c.SEND_WRITE_TO_DEVICE_I2C current_state_i2c.SET_DATA_TO_DEVICE_I2C current_state_i2c.WAIT_FOR_TIP_FROM_STEP_2_I2C current_state_i2c.WRITE_START_AND_WRITE_I2C current_state_i2c.WRITE_SLAVE_ADDRESS_I2C current_state_i2c.ENABLE_CORE_I2C current_state_i2c.WAIT_I2C 
+current_state_i2c.WAIT_I2C 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state_i2c.ENABLE_CORE_I2C 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state_i2c.WRITE_SLAVE_ADDRESS_I2C 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state_i2c.WRITE_START_AND_WRITE_I2C 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state_i2c.WAIT_FOR_TIP_FROM_STEP_2_I2C 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state_i2c.SET_DATA_TO_DEVICE_I2C 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state_i2c.SEND_WRITE_TO_DEVICE_I2C 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state_i2c.WAIT_TRANSFER_DONE_I2C 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state_i2c.SET_LAST_DATA_I2C 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state_i2c.SEND_WRITE_STOP_I2C 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state_i2c.WAIT_FOR_STOP_I2C 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state_i2c.WRITE_READ_FROM_DEVICE_I2C 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state_i2c.READ_FROM_DEVICE_I2C 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state_i2c.WRITE_ENABLE_FROM_FE 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
 State Machine - |xillydemo|current_state
-Name current_state.WRITE_ADDRESS_2 current_state.READ_ADDRESS_2 current_state.WRITE_CONFIG_ALL current_state.WRITE_ENABLE_FROM_FE current_state.WRITE_ENABLE_FROM_EMPTY current_state.WRITE_ENABLE_FROM_FULL current_state.WRITE_CONFIG current_state.READ_CONFIG current_state.WRITE_ROWS current_state.WRITE_FULL current_state.WAIT_FOR_FS current_state.DATA_TRANSFER current_state.READ_ENABLE current_state.READ_COLUMNS current_state.READ_ROWS current_state.WRITE_ENABLE current_state.WRITE_COLUMNS current_state.WAIT 
-current_state.WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-current_state.WRITE_COLUMNS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-current_state.WRITE_ENABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-current_state.READ_ROWS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-current_state.READ_COLUMNS 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-current_state.READ_ENABLE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-current_state.DATA_TRANSFER 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-current_state.WAIT_FOR_FS 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-current_state.WRITE_FULL 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-current_state.WRITE_ROWS 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-current_state.READ_CONFIG 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_CONFIG 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ENABLE_FROM_FULL 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ENABLE_FROM_EMPTY 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ENABLE_FROM_FE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_CONFIG_ALL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.READ_ADDRESS_2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.WRITE_ADDRESS_2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name current_state.WAIT_UNSLEEP current_state.WRITE_ADDRESS_2 current_state.READ_ADDRESS_2 current_state.WRITE_CONFIG_ALL current_state.WRITE_ENABLE_FROM_FE current_state.WRITE_ENABLE_FROM_EMPTY current_state.WRITE_ENABLE_FROM_FULL current_state.WRITE_CONFIG current_state.READ_CONFIG current_state.WRITE_ROWS current_state.WRITE_FULL current_state.WAIT_FOR_FS current_state.DATA_TRANSFER current_state.READ_ENABLE current_state.READ_COLUMNS current_state.READ_ROWS current_state.WRITE_ENABLE current_state.WRITE_COLUMNS current_state.WAIT 
+current_state.WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.WRITE_COLUMNS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.WRITE_ENABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.READ_ROWS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.READ_COLUMNS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.READ_ENABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.DATA_TRANSFER 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.WAIT_FOR_FS 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.WRITE_FULL 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.WRITE_ROWS 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.READ_CONFIG 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.WRITE_CONFIG 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.WRITE_ENABLE_FROM_FULL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.WRITE_ENABLE_FROM_EMPTY 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.WRITE_ENABLE_FROM_FE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.WRITE_CONFIG_ALL 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.READ_ADDRESS_2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.WRITE_ADDRESS_2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.WAIT_UNSLEEP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |xillydemo|svr_lt2:CSI|SVRWXaIp:SVRYyaRh|SVRoGpos:SVRtJDZZ|SVRuPrNG:SVRuPrNG|SVRXSJFV
 Name SVRXSJFV.SVRsdNEU SVRXSJFV.SVRBUADa SVRXSJFV.SVRghRLy 
@@ -205,6 +223,15 @@ Name SVRiBDIb.SVRuhNNA SVRiBDIb.SVRKDTtn SVRiBDIb.SVROoABb
 SVRiBDIb.SVROoABb 0 0 0 
 SVRiBDIb.SVRuhNNA 1 0 1 
 SVRiBDIb.SVRKDTtn 0 1 1 
+
+State Machine - |xillydemo|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
 
 State Machine - |xillydemo|xillybus:xillybus_ins|altpcie_reconfig_3cgx:reconfig|altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp:altpcie_reconfig_3cgx_alt_c3gxb_reconfig_ffp_component|alt_cal_c3gxb:calibration_c3gxb|ret_state
 Name ret_state.CH_ADV ret_state.DPRIO_WAIT ret_state.CAL_RX_RD ret_state.OFFSETS_PDEN_WR ret_state.IDLE ret_state.CAL_RX_WR 

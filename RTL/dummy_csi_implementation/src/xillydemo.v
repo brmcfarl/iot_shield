@@ -11,17 +11,17 @@ module xillydemo
    );
 	
 
-	
+	//States
 	localparam [4:0] WRITE_ROWS=1, WRITE_COLUMNS=2, WRITE_ENABLE=3, READ_ROWS=4, READ_COLUMNS=5, READ_ENABLE=6, DATA_TRANSFER=7, WAIT_FOR_FS=8,WRITE_FULL=9,WAIT=10, READ_CONFIG=11,WRITE_CONFIG=12,WRITE_ENABLE_FROM_FULL=13,WRITE_ENABLE_FROM_EMPTY=14,WRITE_ENABLE_FROM_FE=15,WRITE_CONFIG_ALL=16,S_0=0;
 	reg [4:0] current_state,next_state;
    // Clock and quiesce
    wire 	bus_clk;
    wire 	quiesce;
 
+	//the two variables for the buttons
 	wire [1:0] buttons_pressed;
 	wire [1:0] buttons_held;
-	//wire reset_global;
-      // Memory array
+   // Memory array - not used
    reg [7:0] 	demoarray[0:31];
 	reg [31:0]  output_fifo;
 	reg [9:0]  pixel_reversed;
@@ -226,6 +226,7 @@ module xillydemo
     .user_led(user_led)
   );
 
+  //debouncer for buttons
 	debouncer d1(.button(~user_buttons[0]), .clk(clk_125), .reset(reset_n_but), .pressed(buttons_pressed[0]), .held(buttons_held[0]));
 	debouncer d2(.button(~user_buttons[1]), .clk(clk_125), .reset(reset_n_but), .pressed(buttons_pressed[1]), .held(buttons_held[1]));
 			  
@@ -266,10 +267,11 @@ module xillydemo
 	reg [3:0] current;
 	reg [16:0] lsCounter, leCounter;
 	reg  [3:0]noCounter;
+	
 	always @(posedge bus_clk)
 	begin
 		
-		
+		//if sw2 is pressed reset the variables
 		if(buttons_held[1])
 		begin
 			current_state <= WAIT;
@@ -282,7 +284,10 @@ module xillydemo
 		end
 		else 
 		begin
+			//else set the current state
 			current_state <= next_state;
+			//if is any state of the current, it means a write is going to occur so 
+			//the write flag must increment until 3 to fulfill avalon's timing requirements
 			if(current_state == WRITE_ROWS || current_state == WRITE_COLUMNS || current_state == WRITE_CONFIG_ALL || current_state == WRITE_ENABLE || current_state == WRITE_CONFIG || current_state == WRITE_ENABLE_FROM_FULL || current_state == WRITE_ENABLE_FROM_EMPTY || current_state == WRITE_ENABLE_FROM_FE)
 			begin
 				if(write_flag == 2)
@@ -294,6 +299,8 @@ module xillydemo
 					write_flag <= write_flag + 1;
 				end
 			end
+			//if is any state of the current, it means a read is going to occur so 
+			//the read flag must increment until 3 to fulfill avalon's timing requirements
 			if(current_state == READ_ROWS || current_state == READ_COLUMNS || current_state == READ_ENABLE || current_state == READ_CONFIG)
 			begin
 			
@@ -306,6 +313,10 @@ module xillydemo
 					read_flag <= read_flag + 1;
 				end
 			end
+			//if its on data trasnfer, count  the number of
+			//line starts and line ends, if at a line start the number
+			//of line start is not equal to the number of line ends there 
+			//is a problem
 			if(current_state == DATA_TRANSFER)
 			begin
 				if(svr_ls)
@@ -329,9 +340,9 @@ module xillydemo
 	always @(*)
 	begin
 	
+		//set the variables to default values
 		reset_n = ~buttons_held[1];
 		our_led = noCounter;
-		
 		write = 0;
 		read = 0;
 		address = 0;
@@ -340,7 +351,10 @@ module xillydemo
 		output_fifo = 0;
 		next_state = current_state;
 		current = 0;
+			//check the current state
 			case(current_state)
+				//if in wait, check the command coming from fifo_8
+				//and do the appropiate action
 				WAIT:
 				begin
 					current = 1;
@@ -369,6 +383,9 @@ module xillydemo
 						next_state = READ_ENABLE;
 				  end
 				end
+				//if in write rows, set the required variables to 
+				//read from avalon's interface and at the end
+				//change the state
 				WRITE_ROWS:
 				begin
 					if(write_flag == 2)
@@ -382,6 +399,9 @@ module xillydemo
 						writedata = 16'd1080;
 					end
 				end
+				//if in write columns, set the required variables to 
+				//read from avalon's interface and at the end
+				//change the state
 				WRITE_COLUMNS:
 				begin
 					if(write_flag == 2)
@@ -395,6 +415,10 @@ module xillydemo
 						writedata = 16'd1920;
 					end
 				end
+				//if in write enable, set the required variables to 
+				//read from avalon's interface and at the end
+				//change the state to wait for frame start since we
+				//enabled the svr
 				WRITE_ENABLE:
 				begin
 					if(write_flag == 2)
@@ -409,6 +433,9 @@ module xillydemo
 					
 					end
 				end
+				//if in read rows, set the required variables to 
+				//read from avalon's interface and at the end
+				//change the state
 				READ_ROWS:
 				begin
 					
@@ -429,6 +456,9 @@ module xillydemo
 						address = 1;
 					end	
 				end
+				//set the required variables to 
+				//read from avalon's interface and at the end
+				//change the state
 				READ_COLUMNS:
 				begin
 					if(read_flag == 2)
@@ -448,6 +478,9 @@ module xillydemo
 						address = 2;
 					end
 				end
+				//set the required variables to 
+				//read from avalon's interface and at the end
+				//change the state
 				READ_ENABLE:
 				begin
 					if(read_flag == 2)
@@ -467,15 +500,18 @@ module xillydemo
 						address = 0;
 					end
 				end
+				//if we are trasnfering data
 				DATA_TRANSFER:						 //DATA TRANFSER
 				begin
+					//if a pixel is valid set write request of the 
+					//fifo_32 to high and set its output to the pixel value
 					if(svr_pixel_valid)
 					begin
 						write_request = 1;
 						output_fifo = svr_pixel;
 					end
-					
-					
+					//if the fifo is almost full, disable the svr until
+					//its empty
 					if(user_w_write_32_almost_full == 1'b1)
 					begin
 						//write_request = 1'b0;
@@ -484,6 +520,7 @@ module xillydemo
 					else
 					begin
 					end
+					//if frame end is reached, disable the svr
 					if(svr_fe == 1)
 					begin
 						write_request = 1'b0;
@@ -494,6 +531,8 @@ module xillydemo
 					
 					end
 				end
+				//when there is a frame start enable the
+				//data trasnfer
 				WAIT_FOR_FS:
 				begin
 					if(svr_fs == 1'b1)
@@ -505,6 +544,8 @@ module xillydemo
 					
 					end
 				end
+				//if the fifo is full, wait until its empty
+				//and enable the svr
 				WRITE_FULL:
 				begin
 					current = 10;
@@ -516,6 +557,7 @@ module xillydemo
 					begin
 					end
 				end
+				//disable the svr
 				WRITE_ENABLE_FROM_FULL:
 				begin
 					
@@ -536,6 +578,7 @@ module xillydemo
 						output_fifo = svr_pixel;
 					end
 				end
+				//enable the svr 
 				WRITE_ENABLE_FROM_EMPTY:
 				begin
 					if(write_flag == 2)
@@ -555,6 +598,7 @@ module xillydemo
 						output_fifo = svr_pixel;
 					end
 				end
+				//disable the svr
 				WRITE_ENABLE_FROM_FE:
 				begin
 					if(write_flag == 2)

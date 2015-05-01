@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CGX30CF23) Path("C:/altera/csi_dummy_implementation_restored/") File("xillydemo.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CGX30CF23) Path("C:/Users/Chicho/Documents/GitHub/iot_shield/RTL/dummy_csi_implementation/") File("xillydemo.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
