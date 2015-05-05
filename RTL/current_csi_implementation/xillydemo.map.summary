@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Apr 30 12:56:49 2015
+Analysis & Synthesis Status : Successful - Tue May 05 02:36:33 2015
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
 Revision Name : xillydemo
 Top-level Entity Name : xillydemo
 Family : Cyclone IV GX
-Total logic elements : 12,362
-    Total combinational functions : 9,141
+Total logic elements : 12,331
+    Total combinational functions : 9,110
     Dedicated logic registers : 6,986
 Total registers : 6986
 Total pins : 35

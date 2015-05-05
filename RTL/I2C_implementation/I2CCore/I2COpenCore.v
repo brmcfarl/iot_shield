@@ -190,28 +190,16 @@ begin
 	
 	if(buttons_held[1])
 	begin
-		//address = PRERlo;
-		//writedata = 8'h63;
 		next_state = WAIT;
-		//write = 1;
-		//enable = 1;
-		//write_values_flag = 0;
 	end
 	else 
 	begin
 		case(current_state)
 		WAIT:
 		begin
-			//write_values_flag = 0;
-			//address = PRERhi;
-			//writedata = 8'h0;
-			//write = 1;
 			if(switch_pressed[0] || switch_pressed[1])
 			begin
-				//write = 1;
 				enable = 1;
-				//address = CTR;
-				//writedata = 8'h80;
 				next_state = ENABLE_CORE;
 			end
 			else

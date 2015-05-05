@@ -101,7 +101,7 @@
 	localparam [4:0] WRITE_ROWS=1, WRITE_COLUMNS=2, WRITE_ENABLE=3, READ_ROWS=4, READ_COLUMNS=5, READ_ENABLE=6, DATA_TRANSFER=7, WAIT_FOR_FS=8,WRITE_FULL=9,WAIT=10, READ_CONFIG=11,WRITE_CONFIG=12,WRITE_ENABLE_FROM_FULL=13,WRITE_ENABLE_FROM_EMPTY=14,WRITE_ENABLE_FROM_FE=15,WRITE_CONFIG_ALL=16,READ_ADDRESS_2=17,WRITE_ADDRESS_2=18,WAIT_UNSLEEP = 19,S_0=0;
 	reg [4:0] current_state,next_state;
 	//i2c states and params
-	localparam [7:0] WAIT_I2C = 1,ENABLE_CORE_I2C=2,WRITE_SLAVE_ADDRESS_I2C=3,WRITE_START_AND_WRITE_I2C=4,WAIT_FOR_TIP_FROM_STEP_2_I2C=5,SET_DATA_TO_DEVICE_I2C=6,SEND_WRITE_TO_DEVICE_I2C=7,WAIT_TRANSFER_DONE_I2C=8,SET_LAST_DATA_I2C=9,SEND_WRITE_STOP_I2C=10,WAIT_FOR_STOP_I2C=11, WRITE_READ_FROM_DEVICE_I2C=12, READ_FROM_DEVICE_I2C=13;
+	localparam [7:0] WAIT_I2C = 1,ENABLE_CORE_I2C=2,WRITE_SLAVE_ADDRESS_I2C=3,WRITE_START_AND_WRITE_I2C=4,WAIT_FOR_TIP_FROM_STEP_2_I2C=5,SET_DATA_TO_DEVICE_I2C=6,SEND_WRITE_TO_DEVICE_I2C=7,WAIT_TRANSFER_DONE_I2C=8,SET_LAST_DATA_I2C=9,SEND_WRITE_STOP_I2C=10,WAIT_FOR_STOP_I2C=11;
 	localparam [2:0] PRERlo = 0, PRERhi = 1, CTR = 2, TXR = 3, RXR = 3, CR = 4, SR = 4;
 	reg [7:0] current_state_i2c, next_state_i2c;
 
@@ -468,16 +468,6 @@
 		else 
 		begin
 			current_state <= next_state;
-			/*if(svr_cpu_int)
-			begin
-				if(read_flag >= 2)
-				begin
-					if(readdata[31:16] != 16'h0CA8 && readdata[31:16] != 16'h0000)
-					begin
-						wrongBytesFlag <= wrongBytesFlag + 1;
-					end
-				end
-			end*/
 			//if any of the current states, set the read and write flags to increment
 			if(current_state == WRITE_ROWS || current_state == WRITE_COLUMNS || current_state == WRITE_CONFIG_ALL || current_state == WRITE_ENABLE || current_state == WRITE_CONFIG
 				|| current_state == WRITE_ENABLE_FROM_FULL || current_state == WRITE_ENABLE_FROM_EMPTY || current_state == WRITE_ENABLE_FROM_FE || current_state == WRITE_ADDRESS_2)
@@ -619,46 +609,35 @@
 				begin
 				  if (user_r_read_8_data == 8'b01100011) //c - write enable
 				  begin
-						our_led = status_interrupt[7:4];
 						next_state = WRITE_ENABLE;
 				  end
 				  else if (user_r_read_8_data == 8'b01100110) //f - read and output enable at 32
 				  begin
-					our_led = status_interrupt[11:8];
 						next_state = READ_ENABLE;
 				  end
 				  else if (user_r_read_8_data == 8'b01100111) //g - read and output config at 32
 				  begin
-					our_led = status_interrupt[15:12];
 						next_state = READ_CONFIG;
 				  end
 				  else if (user_r_read_8_data == 8'b01101000) //h - write config 2'b01
 				  begin
-					our_led = status_interrupt[19:16];
 						next_state = WRITE_CONFIG;
 				  end
 				  else if (user_r_read_8_data == 8'b01101001) //i - write config 2'b11
 				  begin
-					our_led = status_interrupt[23:20];
 						next_state = WRITE_CONFIG_ALL;
 				  end
 				  else if (user_r_read_8_data == 8'b01101010) //j - read address 0x02
 				  begin
-					our_led = status_interrupt[27:24];
 						next_state = READ_ADDRESS_2;
 				  end
 				   else if (user_r_read_8_data == 8'b01101011) //k - write address 0x02 
 				  begin
-					our_led = status_interrupt[3:0];
 						next_state = WRITE_ADDRESS_2;
 				  end
-				  else if(user_r_read_8_data == 8'b01101100) //h
+				  else if(user_r_read_8_data == 8'b01101100)
 				  begin
 					our_led = wrongBytesFlag;
-				  end
-				  else
-				  begin
-					our_led = status_interrupt[31:28];
 				  end
 				end
 				//if its write enable, first read the register,
@@ -764,6 +743,9 @@
 						address = 1;
 					end
 				end
+				//first reads the contents of register 2,
+				//enables bits 15-8 with the value of the
+				//dip switch, and writes it back 
 				WRITE_ADDRESS_2:
 				begin
 					if(write_flag == 3)
@@ -782,6 +764,8 @@
 						address = 2;
 					end
 				end
+				//first reads the contents of register 1,
+				//enables bits 1-0, and writes it back 
 				WRITE_CONFIG_ALL:
 				begin
 					if(write_flag == 3)
@@ -938,13 +922,12 @@
 			write_lower_address_flag <= 0;
 			register_index <= 0;
 			last_transmission_flag <= 0;
-			needs_read_flag <= 0;
 		end
 		else 
 		begin
 			current_state_i2c <= next_state_i2c;
 			//if its a frame end, set the reg index to the last value (sleep command)
-			if(current_state_i2c == WRITE_ENABLE_FROM_FE)
+			if(current_state == WRITE_ENABLE_FROM_FE)
 			begin
 				register_index <= 7'h5A;
 				last_transmission_flag <= 1;
@@ -955,7 +938,6 @@
 			begin
 				last_transmission_flag <= 0;
 				register_index <= 0;
-				needs_read_flag <=0;
 				if (user_r_read_8_data == 8'b01100011) //write enable to csi module, unsleep camera
 				begin
 					register_index <= 7'h59;
@@ -965,7 +947,7 @@
 			//any of these states needs the write flag
 			if(current_state_i2c == ENABLE_CORE_I2C || current_state_i2c == WRITE_SLAVE_ADDRESS_I2C || current_state_i2c == WRITE_START_AND_WRITE_I2C 
 				||current_state_i2c ==  SET_DATA_TO_DEVICE_I2C ||current_state_i2c == SEND_WRITE_TO_DEVICE_I2C|| current_state_i2c == SET_LAST_DATA_I2C 
-				||current_state_i2c == SEND_WRITE_STOP_I2C || current_state_i2c == WRITE_READ_FROM_DEVICE_I2C || current_state_i2c == READ_FROM_DEVICE_I2C)
+				||current_state_i2c == SEND_WRITE_STOP_I2C )
 			begin
 				if(write_flag_i2c == 3)
 				begin
@@ -1023,9 +1005,8 @@
 			end
 			//this states are when the reg value is sent, increments the reg index and check if it should 
 			//stop
-			else if (current_state_i2c == SEND_WRITE_STOP_I2C || current_state_i2c == READ_FROM_DEVICE_I2C)
+			else if (current_state_i2c == SEND_WRITE_STOP_I2C)
 			begin
-				needs_read_flag <= 0;
 				if(write_flag_i2c == 3)
 				begin
 					register_index <= register_index + 1;
@@ -1035,10 +1016,6 @@
 					end //if
 				end //if
 			end //else if
-			else if(current_state_i2c == WRITE_READ_FROM_DEVICE_I2C)
-			begin
-				needs_read_flag <= 1;
-			end
 		end
 		
 	end
@@ -1049,8 +1026,6 @@
 		address_i2c = 0;
 		writedata_i2c = 0;
 		write_i2c = 0;
-		//user_leds = readdata;
-		//enable = 1;
 		
 		if(buttons_held[1])
 		begin
@@ -1066,9 +1041,6 @@
 				begin
 					enable_i2c = 1;
 					next_state_i2c = ENABLE_CORE_I2C;
-				end
-				else
-				begin
 				end
 			end
 			//sends the enable core command
@@ -1122,41 +1094,13 @@
 					address_i2c = SR;
 					if(readdata_i2c[1] == 0)
 					begin
-						if(needs_read_flag == 0)
-						begin
-							next_state_i2c = SET_DATA_TO_DEVICE_I2C;		
-						end
-						else if(needs_read_flag == 1)
-						begin
-							next_state_i2c = READ_FROM_DEVICE_I2C;		
-						end		
+						next_state_i2c = SET_DATA_TO_DEVICE_I2C;		
 					end
 				end
 				else
 				begin
 					address_i2c = SR;
 				end			
-			end
-			//reads the i2c value
-			READ_FROM_DEVICE_I2C:
-			begin
-				if(write_flag_i2c == 3)
-				begin
-					if(last_transmission_flag)
-					begin
-						next_state_i2c = WAIT_I2C;
-					end
-					else
-					begin
-						next_state_i2c = WAIT_FOR_STOP_I2C; 
-					end
-				end
-				else
-				begin
-					write_i2c = 1;
-					address_i2c = CR;
-					writedata_i2c = 8'h28;
-				end 
 			end
 			//sets the corresponding data to be written
 			SET_DATA_TO_DEVICE_I2C:
@@ -1199,7 +1143,6 @@
 			//then change state
 			WAIT_TRANSFER_DONE_I2C:
 			begin
-			
 				if(read_flag_i2c == 2)
 				begin
 					address_i2c = SR;
@@ -1213,30 +1156,12 @@
 						begin
 							next_state_i2c = SET_LAST_DATA_I2C; //needs flags
 						end
-						else if(write_lower_address_flag && buttons_held[1])//NEEDS TO CHANGE FOR READ
-						begin
-							next_state_i2c = WRITE_READ_FROM_DEVICE_I2C; //needs flags
-						end
 					end
 				end
 				else
 				begin
 					address_i2c = SR;
 				end		
-			end
-			//read from i2c device
-			WRITE_READ_FROM_DEVICE_I2C: 
-			begin
-				if(write_flag_i2c == 3)
-				begin
-					next_state_i2c = WRITE_START_AND_WRITE_I2C;
-				end
-				else
-				begin
-					write_i2c = 1;
-					address_i2c = TXR;
-					writedata_i2c = address_slave_cam_read;
-				end 
 			end
 			//set the last byte of data 
 			SET_LAST_DATA_I2C:
@@ -1297,7 +1222,6 @@
 
 	reg write_upper_address_flag ;
 	reg write_lower_address_flag ;
-	reg needs_read_flag;
 	reg last_transmission_flag;
 
    assign  user_r_mem_8_empty = 0;

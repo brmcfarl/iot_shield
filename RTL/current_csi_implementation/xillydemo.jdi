@@ -1,9 +1,9 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="bc0a919ab061aa447164"/>
+    <hash md5_digest_80b="86c936e1ff02f6ad7cb8"/>
   </project>
   <file_info>
-    <file checksum="0x00AA9C23" device="EP4CGX30CF23C7" path="xillydemo.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x00AB51C2" device="EP4CGX30CF23C7" path="xillydemo.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info ir_width="8" node_count="1"/>
   <node_info>
